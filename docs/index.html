@@ -8,6 +8,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
         .container {
             max-width: 800px;
@@ -16,7 +18,14 @@
             background-color: #f9f9f9;
             border: 1px solid #ddd;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #444;
         }
         .image {
             width: 100%;
@@ -27,32 +36,34 @@
         .map {
             width: 100%;
             height: 400px;
+            margin: 20px 0;
             border: 1px solid #ddd;
-            border-radius: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Israel</h1>
-        <p>Israel, a country in the Middle East, is known for its rich history, diverse culture, and stunning landscapes.</p>
-        <img class="image" src="https://www.touristisrael.com/wp-content/uploads/2019/04/old-city-jerusalem-1024x683.jpg" alt="Old City Jerusalem">
-        <img class="image" src="https://www.touristisrael.com/wp-content/uploads/2019/04/tel-aviv-beach-1024x683.jpg" alt="Tel Aviv Beach">
-        <img class="image" src="https://www.touristisrael.com/wp-content/uploads/2019/04/masada-1024x683.jpg" alt="Masada">
+        <div class="header">
+            <h1>Israel</h1>
+        </div>
+        <p>Israel is a country in the Middle East, known for its rich history, beautiful beaches, and vibrant culture.</p>
+        <img class="image" src="https://cdn.getyourguide.com/img/tour/5c7d41f5f2d57-1583561916.jpg" alt="Tel Aviv Beach">
+        <img class="image" src="https://www.israel21c.org/wp-content/uploads/2020/08/Masada-National-Park.jpg" alt="Masada National Park">
+        <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Haifa_Bahai_Gardens_2007.jpg/1280px-Haifa_Bahai_Gardens_2007.jpg" alt="Haifa Bahai Gardens" >
         <h2>Recommendations for Attractions:</h2>
         <ul>
-            <li>Old City Jerusalem: a historic walled city with significant religious sites</li>
-            <li>Tel Aviv Beach: a vibrant beachside promenade with restaurants and bars</li>
-            <li>Masada: an ancient fortress and UNESCO World Heritage Site</li>
+            <li>Tel Aviv Beach: A beautiful beach with clear waters and a vibrant promenade.</li>
+            <li>Masada National Park: An ancient fortress and one of Israel's most famous historical sites.</li>
+            <li>Haifa Bahai Gardens: A stunning garden with breathtaking views of the city.</li>
         </ul>
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12951.642113455455!2d34.768392315000004!3d31.776774000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502bf6b8f846eb5%3A0x6211a95b5af5f5d!2sMasada%20National%20Park!5e0!3m2!1sen!2sus!4v1676223351447!5m2!1sen!2sus" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3359.755534835396!2d34.77425131538767!3d32.07155548095971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502b2848a1c1a6b%3A0xeb0c44a85cdcff3!2sTel%20Aviv%20Beach!5e0!3m2!1sen!2sus!4v1643723431348!5m2!1sen!2sus" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
         <p>Coordinates of the attractions:</p>
         <ul>
-            <li>Old City Jerusalem: 31.776774, 35.234224</li>
-            <li>Tel Aviv Beach: 32.071389, 34.763056</li>
-            <li>Masada: 31.325556, 35.353056</li>
+            <li>Tel Aviv Beach: 32.071555, 34.774251</li>
+            <li>Masada National Park: 31.325556, 35.353056</li>
+            <li>Haifa Bahai Gardens: 32.817222, 34.978611</li>
         </ul>
     </div>
 </body>
