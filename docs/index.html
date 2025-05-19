@@ -9,74 +9,97 @@
 <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 20px;
         }
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #f0f0f0;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .image-container {
-            text-align: center;
+        .images {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
             margin-bottom: 20px;
         }
-        .image-container img {
-            width: 80%;
-            height: auto;
+        .images img {
+            width: 30%;
+            height: 200px;
+            object-fit: cover;
             border-radius: 10px;
-        }
-        .map-container {
-            margin-top: 20px;
         }
         .attractions {
             margin-bottom: 20px;
         }
-        .attractions ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .attractions h2 {
+            margin-top: 0;
         }
-        .attractions li {
+        .attraction {
             margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .attractions li strong {
-            font-weight: bold;
+        #map {
+            height: 400px;
+            width: 100%;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .coordinates {
+            margin-bottom: 20px;
+        }
+        .coordinate {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-<div class="container">
 <h1>Thailand</h1>
-<div class="image-container">
+<div class="images">
 
-</div>
-<div class="image-container">
 
-</div>
-<div class="image-container">
 
 </div>
 <div class="attractions">
-<h2>Attractions:</h2>
-<ul>
-<li><strong>Grand Palace</strong> - A historic palace in Bangkok that showcases Thai architecture and culture.</li><img alt="Thailand landscape" src="https://source.unsplash.com/800x600/?Thailand,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li><strong>Phuket Old Town</strong> - A charming town with Sino-Portuguese architecture and lively markets.</li><img alt="Thailand city" src="https://source.unsplash.com/800x600/?Thailand,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li><strong>Doi Suthep</strong> - A mountain peak in Chiang Mai with stunning views and a beautiful temple.</li><img alt="Thailand nature" src="https://source.unsplash.com/800x600/?Thailand,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-</ul>
+<h2>Popular Attractions</h2>
+<div class="attraction">
+<h3>Grand Palace, Bangkok</h3>
+<p>The Grand Palace is a must-visit attraction in Bangkok, featuring a stunning array of temples, halls, and buildings. The palace has been the official residence of the king and queen of Thailand since 1782. Visitors can explore the complex and see the iconic Emerald Buddha.</p>
 </div>
-<div class="map-container">
-<iframe allowfullscreen="" frameborder="0" height="600" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d763917.6443313816!2d98.07429331574455!3d18.788043694744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a18c13488d3%3A0x30003f3d6c4f2c1d!2sThailand!5e0!3m2!1sen!2sus!4v1652903434143!5m2!1sen!2sus" style="border:0" width="800"></iframe>
+<div class="attraction">
+<h3>Phang Nga Bay, Phuket</h3>
+<p>Phang Nga Bay is a beautiful bay located in Phuket, known for its towering limestone cliffs and turquoise waters. Visitors can take a boat tour to explore the bay and see the famous James Bond Island. The bay is also home to a variety of marine life, including monkeys and eagles.</p>
 </div>
-<div class="map-pins">
-<p>Pins:</p>
-<p>Grand Palace: 13.7503, 100.4937</p>
-<p>Phuket Old Town: 7.8843, 98.3923</p>
-<p>Doi Suthep: 18.8063, 98.8843</p>
+<div class="attraction">
+<h3>Doi Suthep, Chiang Mai</h3>
+<p>Doi Suthep is a mountain located just outside of Chiang Mai, offering stunning views of the city and surrounding countryside. Visitors can take a tram or hike to the top of the mountain, where they can see the beautiful Wat Phra That Doi Suthep temple and enjoy the cool mountain air.</p>
 </div>
 </div>
+<div id="map"></div>
+<div class="coordinates">
+<h2>Coordinates</h2>
+<div class="coordinate">
+<p>Grand Palace, Bangkok: 13.7500° N, 100.5000° E</p>
+</div>
+<div class="coordinate">
+<p>Phang Nga Bay, Phuket: 8.2833° N, 98.5000° E</p>
+</div>
+<div class="coordinate">
+<p>Doi Suthep, Chiang Mai: 18.7833° N, 98.9333° E</p>
+</div>
+</div>
+<script async="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&amp;callback=initMap&amp;libraries=&amp;v=weekly"></script>
+<script>
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 13.7500, lng: 100.5000 },
+                zoom: 6,
+            });
+            const grandPalace = { lat: 13.7500, lng: 100.5000 };
+            const phangNgaBay = { lat: 8.2833, lng: 98.5000 };
+            const doiSuthep = { lat: 18.7833, lng: 98.9333 };
+            new google.maps.Marker({ position: grandPalace, map: map, title: "Grand Palace" });
+            new google.maps.Marker({ position: phangNgaBay, map: map, title: "Phang Nga Bay" });
+            new google.maps.Marker({ position: doiSuthep, map: map, title: "Doi Suthep" });
+        }
+    </script>
 </body>
 </html>
 ```
