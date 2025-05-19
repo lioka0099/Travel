@@ -5,19 +5,18 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Thailand</title>
+<title>Thailand Travel Guide</title>
 <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        .images {
+        .image-container {
             display: flex;
-            flex-direction: row;
             justify-content: space-around;
             margin-bottom: 20px;
         }
-        .images img {
+        .image-container img {
             width: 30%;
             height: 200px;
             object-fit: cover;
@@ -26,33 +25,19 @@
         .attractions {
             margin-bottom: 20px;
         }
-        .attractions h2 {
-            margin-top: 0;
-        }
         .attraction {
             margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         #map {
             height: 400px;
             width: 100%;
-            border: 1px solid #ddd;
             margin-bottom: 20px;
-        }
-        .coordinates {
-            margin-bottom: 20px;
-        }
-        .coordinate {
-            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-<h1>Thailand</h1>
-<div class="images">
+<h1>Discover Thailand</h1>
+<div class="image-container">
 
 
 
@@ -60,46 +45,55 @@
 <div class="attractions">
 <h2>Popular Attractions</h2>
 <div class="attraction">
-<h3>Grand Palace, Bangkok</h3>
-<p>The Grand Palace is a must-visit attraction in Bangkok, featuring a stunning array of temples, halls, and buildings. The palace has been the official residence of the king and queen of Thailand since 1782. Visitors can explore the complex and see the iconic Emerald Buddha.</p>
+<h3>The Grand Palace, Bangkok</h3>
+<p>A must-visit attraction in Bangkok, the Grand Palace is a complex of buildings that has been the official residence of the king and queen of Thailand since 1782. It is known for its stunning architecture and historical significance. Visitors can explore the palace grounds and see the famous Emerald Buddha.</p>
 </div>
 <div class="attraction">
-<h3>Phang Nga Bay, Phuket</h3>
-<p>Phang Nga Bay is a beautiful bay located in Phuket, known for its towering limestone cliffs and turquoise waters. Visitors can take a boat tour to explore the bay and see the famous James Bond Island. The bay is also home to a variety of marine life, including monkeys and eagles.</p>
+<h3>Phuket Patong Beach, Phuket</h3>
+<p>Patong Beach is one of the most popular beaches in Phuket, known for its vibrant nightlife, water sports, and lively atmosphere. Visitors can enjoy a range of activities, from swimming and sunbathing to jet-skiing and parasailing. The beach is lined with restaurants, bars, and shops, making it a great spot to relax and have fun.</p>
 </div>
 <div class="attraction">
-<h3>Doi Suthep, Chiang Mai</h3>
-<p>Doi Suthep is a mountain located just outside of Chiang Mai, offering stunning views of the city and surrounding countryside. Visitors can take a tram or hike to the top of the mountain, where they can see the beautiful Wat Phra That Doi Suthep temple and enjoy the cool mountain air.</p>
+<h3>Ayutthaya Historical Park, Ayutthaya</h3>
+<p>Ayutthaya Historical Park is a UNESCO World Heritage Site that showcases the ancient city of Ayutthaya, which was the capital of Thailand from 1350 to 1767. The park features numerous ancient temples and ruins, including Wat Phra Si Sanphet and Wat Mahathat. Visitors can explore the park by bike or on foot, taking in the history and culture of the area.</p>
 </div>
 </div>
 <div id="map"></div>
 <div class="coordinates">
-<h2>Coordinates</h2>
-<div class="coordinate">
-<p>Grand Palace, Bangkok: 13.7500° N, 100.5000° E</p>
+<h2>Attraction Coordinates</h2>
+<ul>
+<li>The Grand Palace, Bangkok: 13.7513° N, 100.4924° E</li><img alt="Thailand landscape" src="https://source.unsplash.com/800x600/?Thailand,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Phuket Patong Beach, Phuket: 7.8964° N, 98.2953° E</li><img alt="Thailand city" src="https://source.unsplash.com/800x600/?Thailand,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Ayutthaya Historical Park, Ayutthaya: 14.3514° N, 100.5673° E</li><img alt="Thailand nature" src="https://source.unsplash.com/800x600/?Thailand,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+</ul>
 </div>
-<div class="coordinate">
-<p>Phang Nga Bay, Phuket: 8.2833° N, 98.5000° E</p>
-</div>
-<div class="coordinate">
-<p>Doi Suthep, Chiang Mai: 18.7833° N, 98.9333° E</p>
-</div>
-</div>
-<script async="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&amp;callback=initMap&amp;libraries=&amp;v=weekly"></script>
 <script>
         function initMap() {
+            const attractions = [
+                { lat: 13.7513, lng: 100.4924, title: 'The Grand Palace' },
+                { lat: 7.8964, lng: 98.2953, title: 'Phuket Patong Beach' },
+                { lat: 14.3514, lng: 100.5673, title: 'Ayutthaya Historical Park' }
+            ];
+
             const map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: 13.7500, lng: 100.5000 },
+                center: { lat: 13.0, lng: 100.0 },
                 zoom: 6,
             });
-            const grandPalace = { lat: 13.7500, lng: 100.5000 };
-            const phangNgaBay = { lat: 8.2833, lng: 98.5000 };
-            const doiSuthep = { lat: 18.7833, lng: 98.9333 };
-            new google.maps.Marker({ position: grandPalace, map: map, title: "Grand Palace" });
-            new google.maps.Marker({ position: phangNgaBay, map: map, title: "Phang Nga Bay" });
-            new google.maps.Marker({ position: doiSuthep, map: map, title: "Doi Suthep" });
+
+            const bounds = new google.maps.LatLngBounds();
+
+            attractions.forEach((attraction) => {
+                const marker = new google.maps.Marker({
+                    position: { lat: attraction.lat, lng: attraction.lng },
+                    map: map,
+                    title: attraction.title
+                });
+                bounds.extend(marker.position);
+            });
+
+            map.fitBounds(bounds);
         }
     </script>
+<script defer="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&amp;callback=initMap&amp;libraries=&amp;v=weekly"></script>
 </body>
 </html>
 ```
