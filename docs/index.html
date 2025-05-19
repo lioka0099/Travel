@@ -5,95 +5,59 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Thailand Travel Guide</title>
+<title>Thailand</title>
 <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .image-container {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
-        .image-container img {
-            width: 30%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .attractions {
-            margin-bottom: 20px;
-        }
-        .attraction {
-            margin-bottom: 10px;
+        img {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
         }
         #map {
-            height: 400px;
+            height: 500px;
             width: 100%;
-            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-<h1>Discover Thailand</h1>
-<div class="image-container">
+<h1>Thailand</h1>
 
 
 
-</div>
-<div class="attractions">
-<h2>Popular Attractions</h2>
-<div class="attraction">
-<h3>The Grand Palace, Bangkok</h3>
-<p>A must-visit attraction in Bangkok, the Grand Palace is a complex of buildings that has been the official residence of the king and queen of Thailand since 1782. It is known for its stunning architecture and historical significance. Visitors can explore the palace grounds and see the famous Emerald Buddha.</p>
-</div>
-<div class="attraction">
-<h3>Phuket Patong Beach, Phuket</h3>
-<p>Patong Beach is one of the most popular beaches in Phuket, known for its vibrant nightlife, water sports, and lively atmosphere. Visitors can enjoy a range of activities, from swimming and sunbathing to jet-skiing and parasailing. The beach is lined with restaurants, bars, and shops, making it a great spot to relax and have fun.</p>
-</div>
-<div class="attraction">
-<h3>Ayutthaya Historical Park, Ayutthaya</h3>
-<p>Ayutthaya Historical Park is a UNESCO World Heritage Site that showcases the ancient city of Ayutthaya, which was the capital of Thailand from 1350 to 1767. The park features numerous ancient temples and ruins, including Wat Phra Si Sanphet and Wat Mahathat. Visitors can explore the park by bike or on foot, taking in the history and culture of the area.</p>
-</div>
-</div>
+<h2>Attractions</h2>
+<p><b>The Grand Palace</b>, located in Bangkok, is one of Thailand's most iconic landmarks and was the official residence of the king and queen of Thailand. The palace is known for its intricate architecture and beautiful gardens. It is a must-visit destination for anyone traveling to Bangkok.</p>
+<p><b>Phi Phi Islands</b>, situated in the Andaman Sea, are known for their stunning beaches and crystal-clear waters. The islands are popular for snorkeling and diving due to their rich marine life. The Phi Phi Islands were made famous by the movie "The Beach."</p>
+<p><b>Wat Phra That Doi Suthep</b>, located in Chiang Mai, is a sacred Buddhist temple perched on a mountain. The temple is famous for its golden chedi and offers panoramic views of Chiang Mai. According to legend, the temple was built after a monk had a vision that the temple should be built on this site.</p>
+<h2>Map</h2>
 <div id="map"></div>
-<div class="coordinates">
-<h2>Attraction Coordinates</h2>
-<ul>
-<li>The Grand Palace, Bangkok: 13.7513° N, 100.4924° E</li><img alt="Thailand landscape" src="https://source.unsplash.com/800x600/?Thailand,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Phuket Patong Beach, Phuket: 7.8964° N, 98.2953° E</li><img alt="Thailand city" src="https://source.unsplash.com/800x600/?Thailand,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Ayutthaya Historical Park, Ayutthaya: 14.3514° N, 100.5673° E</li><img alt="Thailand nature" src="https://source.unsplash.com/800x600/?Thailand,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-</ul>
-</div>
 <script>
         function initMap() {
             const attractions = [
-                { lat: 13.7513, lng: 100.4924, title: 'The Grand Palace' },
-                { lat: 7.8964, lng: 98.2953, title: 'Phuket Patong Beach' },
-                { lat: 14.3514, lng: 100.5673, title: 'Ayutthaya Historical Park' }
+                { lat: 13.7513, lng: 100.4926, name: 'The Grand Palace' },
+                { lat: 7.7359, lng: 98.7742, name: 'Phi Phi Islands' },
+                { lat: 18.8063, lng: 98.9217, name: 'Wat Phra That Doi Suthep' }
             ];
 
             const map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: 13.0, lng: 100.0 },
+                center: { lat: 13.7563, lng: 100.5018 },
                 zoom: 6,
             });
 
-            const bounds = new google.maps.LatLngBounds();
-
-            attractions.forEach((attraction) => {
-                const marker = new google.maps.Marker({
+            attractions.forEach(attraction => {
+                new google.maps.Marker({
                     position: { lat: attraction.lat, lng: attraction.lng },
                     map: map,
-                    title: attraction.title
+                    title: attraction.name
                 });
-                bounds.extend(marker.position);
             });
-
-            map.fitBounds(bounds);
         }
     </script>
-<script defer="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&amp;callback=initMap&amp;libraries=&amp;v=weekly"></script>
+<script async="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&amp;callback=initMap&amp;libraries=&amp;v=weekly"></script>
+<h2>Coordinates</h2>
+<ul>
+<li>The Grand Palace: 13.7513, 100.4926</li><img alt="Thailand landscape" src="https://source.unsplash.com/800x600/?Thailand,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Phi Phi Islands: 7.7359, 98.7742</li><img alt="Thailand city" src="https://source.unsplash.com/800x600/?Thailand,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Wat Phra That Doi Suthep: 18.8063, 98.9217</li><img alt="Thailand nature" src="https://source.unsplash.com/800x600/?Thailand,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+</ul>
 </body>
 </html>
 ```
