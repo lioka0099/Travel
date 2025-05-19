@@ -9,51 +9,74 @@
 <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
         }
         .container {
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #f0f0f0;
             border: 1px solid #ddd;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .image {
-            width: 100%;
-            height: 200px;
+        .image-container {
+            text-align: center;
             margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 80%;
+            height: auto;
             border-radius: 10px;
         }
-        .map {
-            width: 100%;
-            height: 400px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
+        .map-container {
+            margin-top: 20px;
+        }
+        .attractions {
+            margin-bottom: 20px;
+        }
+        .attractions ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .attractions li {
+            margin-bottom: 10px;
+        }
+        .attractions li strong {
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 <div class="container">
 <h1>Thailand</h1>
-<p>Thailand is a country located in Southeast Asia, known for its rich culture, delicious cuisine, and beautiful beaches.</p>
+<div class="image-container">
 
+</div>
+<div class="image-container">
 
+</div>
+<div class="image-container">
 
-<h2>Recommendations</h2>
+</div>
+<div class="attractions">
+<h2>Attractions:</h2>
 <ul>
-<li>Visit the Grand Palace in Bangkok (13.7503, 100.4927)</li><img alt="Thailand landscape" src="https://source.unsplash.com/800x600/?Thailand,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Explore the ancient city of Ayutthaya (14.3564, 100.5754)</li><img alt="Thailand city" src="https://source.unsplash.com/800x600/?Thailand,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Relax on the beaches of Phuket (7.8904, 98.3984)</li><img alt="Thailand nature" src="https://source.unsplash.com/800x600/?Thailand,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Trek through the hills of Chiang Mai (18.7889, 98.9833)</li><img alt="Thailand landscape" src="https://source.unsplash.com/800x600/?Thailand,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li><strong>Grand Palace</strong> - A historic palace in Bangkok that showcases Thai architecture and culture.</li><img alt="Thailand landscape" src="https://source.unsplash.com/800x600/?Thailand,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li><strong>Phuket Old Town</strong> - A charming town with Sino-Portuguese architecture and lively markets.</li><img alt="Thailand city" src="https://source.unsplash.com/800x600/?Thailand,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li><strong>Doi Suthep</strong> - A mountain peak in Chiang Mai with stunning views and a beautiful temple.</li><img alt="Thailand nature" src="https://source.unsplash.com/800x600/?Thailand,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
 </ul>
-<div class="map">
-<iframe allowfullscreen="" frameborder="0" height="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127507.39004951764!2d100.34823621458145!3d13.66377441971091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30a2a60c1b51e1eb%3A0x8001010a5a4833d3!2sBangkok%2C%20Thailand!5e0!3m2!1sen!2sin!4v1664298134198!5m2!1sen!2sin" style="border:0" width="100%"></iframe>
+</div>
+<div class="map-container">
+<iframe allowfullscreen="" frameborder="0" height="600" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d763917.6443313816!2d98.07429331574455!3d18.788043694744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a18c13488d3%3A0x30003f3d6c4f2c1d!2sThailand!5e0!3m2!1sen!2sus!4v1652903434143!5m2!1sen!2sus" style="border:0" width="800"></iframe>
+</div>
+<div class="map-pins">
+<p>Pins:</p>
+<p>Grand Palace: 13.7503, 100.4937</p>
+<p>Phuket Old Town: 7.8843, 98.3923</p>
+<p>Doi Suthep: 18.8063, 98.8843</p>
 </div>
 </div>
 </body>
 </html>
 ```
-
-Note: You can adjust the width and height of the images and the map to your liking. The coordinates for the Grand Palace, Ayutthaya, Phuket, and Chiang Mai are included in the recommendations list. The Google Maps iframe includes the coordinates for these locations, but you may need to adjust the map zoom and center to display all the locations.
