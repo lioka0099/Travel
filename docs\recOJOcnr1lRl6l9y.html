@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Japan Travel Guide</title>
+<title>Japan</title>
 <style>
         img {
-            width: 100%;
+            max-width: 100%;
             height: auto;
-            margin: 20px 0;
+            margin: 10px;
         }
         #map {
             height: 400px;
@@ -19,26 +19,26 @@
     </style>
 </head>
 <body>
-<h1>Discover Japan</h1>
+<h1>Japan</h1>
 
 
 
-<h2>Top Attractions</h2>
-<p><b>Fushimi Inari Shrine</b>, located in Kyoto, is famous for its thousands of vermilion torii gates that form a tunnel up the mountain. It's a breathtaking sight to walk through the gates and explore the shrine. The shrine is dedicated to Inari, the Shinto god of rice.</p>
-<p><b>Tokyo Tower</b>, situated in Tokyo, is a communications tower that stands 333 meters tall, offering stunning views of the city from its observation decks. It was built in 1958 and was inspired by the Eiffel Tower. Visitors can enjoy shopping and dining at the tower's facilities.</p>
-<p><b>Mount Fuji</b>, near Tokyo, is Japan's highest peak and a iconic symbol of the country. It's a popular destination for hiking and trekking, with several routes to the summit. The mountain is considered sacred and is surrounded by five lakes.</p>
-<h2>Map of Attractions</h2>
+<h2>Attractions</h2>
+<p><b>Fushimi Inari Shrine</b>, located in Kyoto, is famous for its thousands of vermilion torii gates that form a tunnel up the mountain. It's a breathtaking sight and a great spot for hiking. The shrine is dedicated to Inari, the Shinto god of rice.</p>
+<p><b>Tokyo Skytree</b>, located in Tokyo, is the tallest tower in the world and offers panoramic views of the city from its observation decks. It's a popular spot for tourists and locals alike. The tower is designed to withstand earthquakes and typhoons.</p>
+<p><b>Mount Fuji</b>, located on the main island of Honshu, is Japan's highest mountain and a sacred symbol of the country. It's a popular destination for hikers and photographers. The mountain is considered an active volcano, although it has not erupted since 1707.</p>
+<h2>Map</h2>
 <div id="map"></div>
 <script>
         function initMap() {
             const map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: 35.6895, lng: 139.6917 },
+                center: { lat: 36.2048, lng: 138.2529 },
                 zoom: 6,
             });
             const attractions = [
-                { name: "Fushimi Inari Shrine", lat: 34.967143, lng: 135.772069 },
-                { name: "Tokyo Tower", lat: 35.659255, lng: 139.765415 },
-                { name: "Mount Fuji", lat: 35.3606, lng: 138.7274 },
+                { name: "Fushimi Inari Shrine", lat: 34.967146, lng: 135.772695 },
+                { name: "Tokyo Skytree", lat: 35.710063, lng: 139.8107 },
+                { name: "Mount Fuji", lat: 35.360625, lng: 138.727375 },
             ];
             attractions.forEach((attraction) => {
                 new google.maps.Marker({
@@ -49,12 +49,12 @@
             });
         }
     </script>
-<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&amp;callback=initMap&amp;libraries=&amp;v=weekly"></script>
-<h2>Attraction Coordinates</h2>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&amp;callback=initMap&amp;libraries=&amp;v=weekly"></script>
+<h2>Coordinates</h2>
 <ul>
-<li>Fushimi Inari Shrine: 34.967143, 135.772069</li><img alt="japan landscape" src="https://source.unsplash.com/800x600/?japan,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Tokyo Tower: 35.659255, 139.765415</li><img alt="japan city" src="https://source.unsplash.com/800x600/?japan,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Mount Fuji: 35.3606, 138.7274</li><img alt="japan nature" src="https://source.unsplash.com/800x600/?japan,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Fushimi Inari Shrine: 34.967146, 135.772695</li><img alt="japan landscape" src="https://source.unsplash.com/800x600/?japan,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Tokyo Skytree: 35.710063, 139.8107</li><img alt="japan city" src="https://source.unsplash.com/800x600/?japan,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Mount Fuji: 35.360625, 138.727375</li><img alt="japan nature" src="https://source.unsplash.com/800x600/?japan,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
 </ul>
 </body>
 </html>
