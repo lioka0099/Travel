@@ -6,15 +6,15 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Thailand</title>
+<link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
 <style>
-        img {
-            width: 100%;
-            height: auto;
-            margin: 10px 0;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-        #map {
-            height: 500px;
-            width: 100%;
+        .attraction {
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -23,40 +23,42 @@
 
 
 
-
 <h2>Attractions</h2>
-<p><b>The Grand Palace</b> in Bangkok is a must-visit attraction, known for its stunning architecture and historical significance. It's the official residence of the king and queen of Thailand since 1782. Visitors can see the Phra Thinang Chakri Group, which houses the offices of the king.</p>
-<p><b>Phuket Big Buddha</b> is located on top of the Nakkerd Hills between Chalong and Kata beaches. This 45-meter-tall marble Buddha is an iconic symbol of Phuket. Visitors can enjoy stunning views of the island from the site.</p>
-<p><b>Wat Phra That Doi Suthep</b> is a Buddhist temple in Chiang Mai, perched on a mountain peak. The temple is known for its golden chedi and the views of Chiang Mai city below. Visitors can see the naga (serpent) staircase leading to the temple.</p>
-<h2>Map</h2>
-<div id="map"></div>
-<script>
-        function initMap() {
-            const map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: 13.7563, lng: 100.5018 },
-                zoom: 5,
-            });
-            const attractions = [
-                { name: "The Grand Palace", lat: 13.7513, lng: 100.4923 },
-                { name: "Phuket Big Buddha", lat: 7.8283, lng: 98.3128 },
-                { name: "Wat Phra That Doi Suthep", lat: 18.8063, lng: 98.9217 },
-            ];
-            attractions.forEach((attraction) => {
-                new google.maps.Marker({
-                    position: { lat: attraction.lat, lng: attraction.lng },
-                    map: map,
-                    title: attraction.name,
-                });
-            });
-        }
-    </script>
-<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&amp;callback=initMap&amp;libraries=&amp;v=weekly"></script>
-<h2>Coordinates</h2>
+<div class="attraction">
+<h3>The Grand Palace</h3>
+<p>Bangkok, Thailand. The Grand Palace is one of Bangkok's most famous landmarks and a must-visit attraction, known for its stunning architecture and historical significance.</p>
+</div>
+<div class="attraction">
+<h3>Phuket Big Buddha</h3>
+<p>Phuket, Thailand. The Phuket Big Buddha is a 45-meter-tall statue of Buddha on top of a hill in Phuket, offering panoramic views of the island.</p>
+</div>
+<div class="attraction">
+<h3>Wat Rong Khun</h3>
+<p>Chiang Rai, Thailand. Wat Rong Khun, also known as the White Temple, is a contemporary, unconventional Buddhist temple known for its unique architecture and intricate details.</p>
+</div>
+<div id="map" style="height:400px; width:100%; margin:1rem 0;"></div>
+<h2>Attraction Coordinates</h2>
 <ul>
-<li>The Grand Palace: 13.7513, 100.4923</li><img alt="Thailand landscape" src="https://source.unsplash.com/800x600/?Thailand,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Phuket Big Buddha: 7.8283, 98.3128</li><img alt="Thailand city" src="https://source.unsplash.com/800x600/?Thailand,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Wat Phra That Doi Suthep: 18.8063, 98.9217</li><img alt="Thailand nature" src="https://source.unsplash.com/800x600/?Thailand,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>The Grand Palace, Bangkok: 13.7513° N, 100.4914° E</li><img alt="Thailand landscape" src="https://source.unsplash.com/800x600/?Thailand,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Phuket Big Buddha, Phuket: 7.8278° N, 98.3667° E</li><img alt="Thailand city" src="https://source.unsplash.com/800x600/?Thailand,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Wat Rong Khun, Chiang Rai: 19.8264° N, 99.7603° E</li><img alt="Thailand nature" src="https://source.unsplash.com/800x600/?Thailand,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
 </ul>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+        var map = L.map('map').setView([13.75, 100.5], 6);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+        L.marker([13.7513, 100.4914])
+            .addTo(map)
+            .bindPopup('<b>The Grand Palace</b><br>Bangkok');
+        L.marker([7.8278, 98.3667])
+            .addTo(map)
+            .bindPopup('<b>Phuket Big Buddha</b><br>Phuket');
+        L.marker([19.8264, 99.7603])
+            .addTo(map)
+            .bindPopup('<b>Wat Rong Khun</b><br>Chiang Rai');
+    </script>
 </body>
 </html>
 ```
