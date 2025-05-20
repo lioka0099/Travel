@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Argentina Travel Guide</title>
-<link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<link crossorigin="" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" rel="stylesheet"/>
+<script crossorigin="" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <style>
         img {
             width: 100%;
             height: auto;
-            max-width: 300px;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-        }
-        .attraction {
-            margin-bottom: 20px;
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -26,34 +19,33 @@
 
 
 
-<h2>Top Attractions</h2>
-<div class="attraction">
-<h3>Iguazú Falls, Misiones Province</h3>
-<p>Iguazú Falls is a breathtaking spectacle of 275 individual waterfalls, spanning almost 2 miles. A fun fact about Iguazú Falls is that it's surrounded by lush tropical rainforest, making it a unique and unforgettable experience.</p>
-</div>
-<div class="attraction">
-<h3>Recoleta Cemetery, Buenos Aires</h3>
-<p>Recoleta Cemetery is a grandiose cemetery that's often referred to as a "city of the dead." With elaborate mausoleums and statues, it's a fascinating and somewhat eerie attraction. A fun fact is that it contains the grave of Eva Perón, also known as Evita.</p>
-</div>
-<div class="attraction">
-<h3>Perito Moreno Glacier, Los Glaciares National Park, Santa Cruz Province</h3>
-<p>Perito Moreno Glacier is one of the few glaciers in the world that's still growing. Located in Los Glaciares National Park, it's a stunning sight to behold, with its towering ice walls and turquoise glacial lake. A fun fact is that it's one of the most accessible glaciers in Patagonia.</p>
-</div>
-<div id="map" style="width:100%; height:400px;"></div>
-<script>
-        var map = L.map('map').setView([-34.6037, -58.3816], 4);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap'
-        }).addTo(map);
-        L.marker([-25.6953, -54.4367]).addTo(map).bindPopup('Iguazú Falls');
-        L.marker([-34.5833, -58.4667]).addTo(map).bindPopup('Recoleta Cemetery');
-        L.marker([-50.4667, -73.05]).addTo(map).bindPopup('Perito Moreno Glacier');
-    </script>
-<h2>Attraction Coordinates</h2>
+<h2>Attractions</h2>
 <ul>
-<li>Iguazú Falls: -25.6953, -54.4367</li><img alt="argentina landscape" src="https://source.unsplash.com/800x600/?argentina,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Recoleta Cemetery: -34.5833, -58.4667</li><img alt="argentina city" src="https://source.unsplash.com/800x600/?argentina,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Perito Moreno Glacier: -50.4667, -73.05</li><img alt="argentina nature" src="https://source.unsplash.com/800x600/?argentina,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Iguazú Falls, Misiones – The falls consist of over 275 individual cascades.</li><img alt="argentina landscape" src="https://source.unsplash.com/800x600/?argentina,landscape" style="max-width:100%;margin:0.5rem 0;display:block;"/>
+<li>Teatro Colón, Buenos Aires – Considered one of the world's best opera houses.</li><img alt="argentina city" src="https://source.unsplash.com/800x600/?argentina,city" style="max-width:100%;margin:0.5rem 0;display:block;"/>
+<li>Perito Moreno Glacier, Santa Cruz – A glacier in Los Glaciares National Park.</li><img alt="argentina nature" src="https://source.unsplash.com/800x600/?argentina,nature" style="max-width:100%;margin:0.5rem 0;display:block;"/>
 </ul>
+<div id="map" style="width:100%;height:400px"></div>
+<h2>Coordinates</h2>
+<ul>
+<li>Iguazú Falls: -25.7, -54.4333</li>
+<li>Teatro Colón: -34.6011, -58.3828</li>
+<li>Perito Moreno Glacier: -50.4872, -73.0569</li>
+</ul>
+<script>
+        var attractions = [
+            {name: "Iguazú Falls", lat: -25.7, lng: -54.4333},
+            {name: "Teatro Colón", lat: -34.6011, lng: -58.3828},
+            {name: "Perito Moreno Glacier", lat: -50.4872, lng: -73.0569}
+        ];
+        var map = L.map('map').setView([attractions[0].lat, attractions[0].lng], 4);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+            subdomains: ['a', 'b', 'c']
+        }).addTo(map);
+        attractions.forEach(function(attraction) {
+            L.marker([attraction.lat, attraction.lng]).addTo(map).bindPopup(attraction.name);
+        });
+    </script>
 </body>
 </html>
