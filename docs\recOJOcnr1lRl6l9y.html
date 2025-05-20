@@ -10,38 +10,29 @@
 <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
         }
-        .attraction {
-            margin-bottom: 1rem;
+        #map {
+            height: 400px; 
+            width: 100%; 
+            margin: 1rem 0;
         }
     </style>
 </head>
 <body>
 <h1>Thailand</h1>
-
-
-
+<img alt="Grand Palace in Bangkok" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Grand_palace_in_bangkok.jpg/1280px-Grand_palace_in_bangkok.jpg" style="width:100%; height:auto; margin:1rem 0;"/>
+<img alt="Beach in Thailand" src="https://source.unsplash.com/featured/?thailand,beach" style="width:100%; height:auto; margin:1rem 0;"/>
+<img alt="Big Buddha in Phuket" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Phuket_big Buddha.jpg/1280px-Phuket_big_Buddha.jpg" style="width:100%; height:auto; margin:1rem 0;"/>
 <h2>Attractions</h2>
-<div class="attraction">
-<h3>The Grand Palace</h3>
-<p>Bangkok, Thailand. The Grand Palace is one of Bangkok's most famous landmarks and a must-visit attraction, known for its stunning architecture and historical significance.</p>
-</div>
-<div class="attraction">
-<h3>Phuket Big Buddha</h3>
-<p>Phuket, Thailand. The Phuket Big Buddha is a 45-meter-tall statue of Buddha on top of a hill in Phuket, offering panoramic views of the island.</p>
-</div>
-<div class="attraction">
-<h3>Wat Rong Khun</h3>
-<p>Chiang Rai, Thailand. Wat Rong Khun, also known as the White Temple, is a contemporary, unconventional Buddhist temple known for its unique architecture and intricate details.</p>
-</div>
-<div id="map" style="height:400px; width:100%; margin:1rem 0;"></div>
-<h2>Attraction Coordinates</h2>
+<p><b>The Grand Palace</b>, Bangkok - The Grand Palace is one of Bangkok's most famous landmarks and a must-visit attraction. It has been the official residence of the king and queen of Thailand since 1782. The palace is known for its stunning architecture and intricate details.</p>
+<p><b>Wat Phra Kaew</b>, Bangkok - Wat Phra Kaew is a temple complex located within the Grand Palace grounds. It is home to the famous Emerald Buddha, a highly revered Buddha image in Thailand. Visitors can explore the temple's stunning architecture and learn about its rich history.</p>
+<p><b>Phuket Big Buddha</b>, Phuket - The Phuket Big Buddha is a 45-meter-tall marble Buddha statue located on top of a hill in Phuket. It is one of the largest Buddha statues in Thailand and offers stunning views of the surrounding islands. Visitors can also explore the nearby temples and learn about the local culture.</p>
+<div id="map"></div>
+<h2>Coordinates</h2>
 <ul>
-<li>The Grand Palace, Bangkok: 13.7513° N, 100.4914° E</li><img alt="Thailand landscape" src="https://source.unsplash.com/800x600/?Thailand,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Phuket Big Buddha, Phuket: 7.8278° N, 98.3667° E</li><img alt="Thailand city" src="https://source.unsplash.com/800x600/?Thailand,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Wat Rong Khun, Chiang Rai: 19.8264° N, 99.7603° E</li><img alt="Thailand nature" src="https://source.unsplash.com/800x600/?Thailand,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>The Grand Palace, Bangkok: 13.7513° N, 100.4915° E</li><img alt="Thailand landscape" src="https://source.unsplash.com/800x600/?Thailand,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Wat Phra Kaew, Bangkok: 13.7513° N, 100.4915° E</li><img alt="Thailand city" src="https://source.unsplash.com/800x600/?Thailand,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Phuket Big Buddha, Phuket: 7.8272° N, 98.3667° E</li><img alt="Thailand nature" src="https://source.unsplash.com/800x600/?Thailand,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
 </ul>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
@@ -49,15 +40,18 @@
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
-        L.marker([13.7513, 100.4914])
-            .addTo(map)
-            .bindPopup('<b>The Grand Palace</b><br>Bangkok');
-        L.marker([7.8278, 98.3667])
-            .addTo(map)
-            .bindPopup('<b>Phuket Big Buddha</b><br>Phuket');
-        L.marker([19.8264, 99.7603])
-            .addTo(map)
-            .bindPopup('<b>Wat Rong Khun</b><br>Chiang Rai');
+
+        L.marker([13.7513, 100.4915])
+        .addTo(map)
+        .bindPopup('<b>The Grand Palace</b><br>Bangkok');
+
+        L.marker([13.7513, 100.4915])
+        .addTo(map)
+        .bindPopup('<b>Wat Phra Kaew</b><br>Bangkok');
+
+        L.marker([7.8272, 98.3667])
+        .addTo(map)
+        .bindPopup('<b>Phuket Big Buddha</b><br>Phuket');
     </script>
 </body>
 </html>
