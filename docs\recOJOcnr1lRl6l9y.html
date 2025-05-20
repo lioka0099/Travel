@@ -5,54 +5,59 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Thailand</title>
-<link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
+<title>Japan Travel Guide</title>
 <style>
-        body {
-            font-family: Arial, sans-serif;
+        img {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
         }
         #map {
-            height: 400px; 
-            width: 100%; 
-            margin: 1rem 0;
+            height: 400px;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-<h1>Thailand</h1>
-<img alt="Grand Palace in Bangkok" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Grand_palace_in_bangkok.jpg/1280px-Grand_palace_in_bangkok.jpg" style="width:100%; height:auto; margin:1rem 0;"/>
-<img alt="Beach in Thailand" src="https://source.unsplash.com/featured/?thailand,beach" style="width:100%; height:auto; margin:1rem 0;"/>
-<img alt="Big Buddha in Phuket" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Phuket_big Buddha.jpg/1280px-Phuket_big_Buddha.jpg" style="width:100%; height:auto; margin:1rem 0;"/>
-<h2>Attractions</h2>
-<p><b>The Grand Palace</b>, Bangkok - The Grand Palace is one of Bangkok's most famous landmarks and a must-visit attraction. It has been the official residence of the king and queen of Thailand since 1782. The palace is known for its stunning architecture and intricate details.</p>
-<p><b>Wat Phra Kaew</b>, Bangkok - Wat Phra Kaew is a temple complex located within the Grand Palace grounds. It is home to the famous Emerald Buddha, a highly revered Buddha image in Thailand. Visitors can explore the temple's stunning architecture and learn about its rich history.</p>
-<p><b>Phuket Big Buddha</b>, Phuket - The Phuket Big Buddha is a 45-meter-tall marble Buddha statue located on top of a hill in Phuket. It is one of the largest Buddha statues in Thailand and offers stunning views of the surrounding islands. Visitors can also explore the nearby temples and learn about the local culture.</p>
+<h1>Discover Japan</h1>
+
+
+
+<h2>Top Attractions</h2>
+<h3>Fushimi Inari Shrine, Kyoto</h3>
+<p>Fushimi Inari Shrine is famous for its thousands of vermilion torii gates forming a tunnel up the mountain. It's a breathtaking sight and a great spot for hiking. The shrine is dedicated to Inari, the Shinto god of rice.</p>
+<h3>Tokyo Tower, Tokyo</h3>
+<p>Tokyo Tower is a communications tower built in 1958, inspired by the Eiffel Tower. It stands at 332.9 meters tall and offers panoramic views of the city from its observation decks. At night, it's illuminated, making it a beautiful sight.</p>
+<h3>Mount Fuji, Yamanashi</h3>
+<p>Mount Fuji is Japan's highest mountain and an iconic symbol of the country. It's a popular destination for hiking and climbing, with several trails leading to the summit. The mountain is considered sacred and is surrounded by five lakes.</p>
 <div id="map"></div>
-<h2>Coordinates</h2>
-<ul>
-<li>The Grand Palace, Bangkok: 13.7513° N, 100.4915° E</li><img alt="Thailand landscape" src="https://source.unsplash.com/800x600/?Thailand,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Wat Phra Kaew, Bangkok: 13.7513° N, 100.4915° E</li><img alt="Thailand city" src="https://source.unsplash.com/800x600/?Thailand,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Phuket Big Buddha, Phuket: 7.8272° N, 98.3667° E</li><img alt="Thailand nature" src="https://source.unsplash.com/800x600/?Thailand,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-</ul>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
-        var map = L.map('map').setView([13.75, 100.5], 6);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
-
-        L.marker([13.7513, 100.4915])
-        .addTo(map)
-        .bindPopup('<b>The Grand Palace</b><br>Bangkok');
-
-        L.marker([13.7513, 100.4915])
-        .addTo(map)
-        .bindPopup('<b>Wat Phra Kaew</b><br>Bangkok');
-
-        L.marker([7.8272, 98.3667])
-        .addTo(map)
-        .bindPopup('<b>Phuket Big Buddha</b><br>Phuket');
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 35.6895, lng: 139.6917 },
+                zoom: 6,
+            });
+            const attractions = [
+                { name: "Fushimi Inari Shrine", lat: 34.967146, lng: 135.774036 },
+                { name: "Tokyo Tower", lat: 35.659255, lng: 139.765415 },
+                { name: "Mount Fuji", lat: 35.3606, lng: 138.7274 },
+            ];
+            attractions.forEach((attraction) => {
+                new google.maps.Marker({
+                    position: { lat: attraction.lat, lng: attraction.lng },
+                    map: map,
+                    title: attraction.name,
+                });
+            });
+        }
     </script>
+<script async="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&amp;callback=initMap&amp;libraries=&amp;v=weekly"></script>
+<h2>Attraction Coordinates</h2>
+<ul>
+<li>Fushimi Inari Shrine: 34.967146, 135.774036</li><img alt="japan landscape" src="https://source.unsplash.com/800x600/?japan,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Tokyo Tower: 35.659255, 139.765415</li><img alt="japan city" src="https://source.unsplash.com/800x600/?japan,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Mount Fuji: 35.3606, 138.7274</li><img alt="japan nature" src="https://source.unsplash.com/800x600/?japan,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+</ul>
 </body>
 </html>
 ```
