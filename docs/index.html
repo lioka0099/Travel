@@ -4,9 +4,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Travel Guide to India</title>
-<link crossorigin="" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" rel="stylesheet"/>
-<script crossorigin="" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<title>India Travel Guide</title>
+<link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <style>
         img {
             width: 100%;
@@ -16,39 +16,32 @@
     </style>
 </head>
 <body>
-<h1>Travel Guide to India</h1>
+<h1>Discover India</h1>
 
 
 
-<h2>Attractions</h2>
-<ul>
-<li>Taj Mahal, Agra – Made entirely out of white marble.</li><img alt="india landscape" src="https://source.unsplash.com/800x600/?india,landscape" style="max-width:100%;margin:0.5rem 0;display:block;"/>
-<li>Red Fort, Delhi – A UNESCO World Heritage Site.</li><img alt="india city" src="https://source.unsplash.com/800x600/?india,city" style="max-width:100%;margin:0.5rem 0;display:block;"/>
-<li>Hampi, Hospet – An ancient city filled with ruins and temples.</li><img alt="india nature" src="https://source.unsplash.com/800x600/?india,nature" style="max-width:100%;margin:0.5rem 0;display:block;"/>
-</ul>
-<div id="map" style="width:100%;height:400px"></div>
-<h2>Coordinates</h2>
-<ul>
-<li>Taj Mahal: 27.1753° N, 78.0422° E.</li>
-<li>Red Fort: 28.6562° N, 77.2410° E.</li>
-<li>Hampi: 15.3356° N, 76.4604° E.</li>
-</ul>
+<h2>Top Attractions</h2>
+<h3>Taj Mahal, Agra</h3>
+<p>The Taj Mahal is a mausoleum made of white marble, built by the Mughal emperor Shah Jahan in memory of his wife Mumtaz Mahal. It is considered one of the most beautiful examples of Mughal architecture, a blend of Indian, Persian, and Islamic styles.</p>
+<h3>Red Fort, Delhi</h3>
+<p>The Red Fort is a historic fort in Delhi, India, that served as the main residence of the Mughal emperors. It is a UNESCO World Heritage Site and is considered one of the most iconic landmarks in India.</p>
+<h3>Golden Temple, Amritsar</h3>
+<p>The Golden Temple, also known as Harmandir Sahib, is a gurudwara (Sikh temple) in Amritsar, Punjab. It is one of the most sacred sites in Sikhism and is known for its golden dome and beautiful architecture.</p>
+<div id="map" style="width:100%; height:400px;"></div>
 <script>
-        var attractions = [
-            {name: 'Taj Mahal', lat: 27.1753, lng: 78.0422},
-            {name: 'Red Fort', lat: 28.6562, lng: 77.2410},
-            {name: 'Hampi', lat: 15.3356, lng: 76.4604}
-        ];
-
-        var map = L.map('map').setView([attractions[0].lat, attractions[0].lng], 13);
+        var map = L.map('map').setView([20.5937, 78.9629], 5);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
-            subdomains: ['a', 'b', 'c']
+            attribution: ' OpenStreetMap'
         }).addTo(map);
-
-        attractions.forEach(function(attraction) {
-            L.marker([attraction.lat, attraction.lng]).addTo(map).bindPopup(attraction.name);
-        });
+        L.marker([27.1753, 78.0422]).addTo(map).bindPopup('Taj Mahal');
+        L.marker([28.6562, 77.2410]).addTo(map).bindPopup('Red Fort');
+        L.marker([31.6199, 74.8764]).addTo(map).bindPopup('Golden Temple');
     </script>
+<h2>Attraction Coordinates</h2>
+<ul>
+<li>Taj Mahal: 27.1753, 78.0422</li><img alt="india landscape" src="https://source.unsplash.com/800x600/?india,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Red Fort: 28.6562, 77.2410</li><img alt="india city" src="https://source.unsplash.com/800x600/?india,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Golden Temple: 31.6199, 74.8764</li><img alt="india nature" src="https://source.unsplash.com/800x600/?india,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+</ul>
 </body>
 </html>
