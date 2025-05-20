@@ -8,9 +8,9 @@
 <title>Japan Travel Guide</title>
 <style>
         img {
-            width: 100%;
+            max-width: 100%;
             height: auto;
-            margin: 20px 0;
+            margin: 10px;
         }
         #map {
             height: 400px;
@@ -24,23 +24,21 @@
 
 
 <h2>Top Attractions</h2>
-<h3>Fushimi Inari Shrine, Kyoto</h3>
-<p>Fushimi Inari Shrine is famous for its thousands of vermilion torii gates forming a tunnel up the mountain. It's a breathtaking sight and a great spot for hiking. The shrine is dedicated to Inari, the Shinto god of rice.</p>
-<h3>Tokyo Tower, Tokyo</h3>
-<p>Tokyo Tower is a communications tower built in 1958, inspired by the Eiffel Tower. It stands at 332.9 meters tall and offers panoramic views of the city from its observation decks. At night, it's illuminated, making it a beautiful sight.</p>
-<h3>Mount Fuji, Yamanashi</h3>
-<p>Mount Fuji is Japan's highest mountain and an iconic symbol of the country. It's a popular destination for hiking and climbing, with several trails leading to the summit. The mountain is considered sacred and is surrounded by five lakes.</p>
+<p><b>Fushimi Inari Shrine</b>, located in Kyoto, is famous for its thousands of vermilion torii gates forming a tunnel up the mountain. It's a breathtaking sight, especially during sunrise or sunset. Visitors can hike up the mountain through the gates.</p>
+<p><b>Tokyo Skytree</b>, in Tokyo, is the tallest tower in the world, offering panoramic views of the city from its observation decks. It's a must-visit for its height and the excellent views it provides. The tower is surrounded by a beautiful park.</p>
+<p><b>Miyajima Island</b>, near Hiroshima, is known for its scenic beauty and historic landmarks, including the famous Itsukushima Shrine, which appears to be floating during high tide. The island is also home to friendly deer and beautiful beaches. Visitors can enjoy hiking and scenic boat rides.</p>
+<h2>Map of Attractions</h2>
 <div id="map"></div>
 <script>
         function initMap() {
             const map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: 35.6895, lng: 139.6917 },
+                center: { lat: 35.6895, lng: 139.7670 },
                 zoom: 6,
             });
             const attractions = [
-                { name: "Fushimi Inari Shrine", lat: 34.967146, lng: 135.774036 },
-                { name: "Tokyo Tower", lat: 35.659255, lng: 139.765415 },
-                { name: "Mount Fuji", lat: 35.3606, lng: 138.7274 },
+                { lat: 34.9683, lng: 135.7749, name: "Fushimi Inari Shrine" },
+                { lat: 35.7101, lng: 139.8107, name: "Tokyo Skytree" },
+                { lat: 34.2973, lng: 132.3186, name: "Miyajima Island" },
             ];
             attractions.forEach((attraction) => {
                 new google.maps.Marker({
@@ -51,12 +49,12 @@
             });
         }
     </script>
-<script async="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&amp;callback=initMap&amp;libraries=&amp;v=weekly"></script>
+<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&amp;callback=initMap&amp;libraries=&amp;v=weekly"></script>
 <h2>Attraction Coordinates</h2>
 <ul>
-<li>Fushimi Inari Shrine: 34.967146, 135.774036</li><img alt="japan landscape" src="https://source.unsplash.com/800x600/?japan,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Tokyo Tower: 35.659255, 139.765415</li><img alt="japan city" src="https://source.unsplash.com/800x600/?japan,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Mount Fuji: 35.3606, 138.7274</li><img alt="japan nature" src="https://source.unsplash.com/800x600/?japan,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Fushimi Inari Shrine: 34.9683, 135.7749</li><img alt="japan landscape" src="https://source.unsplash.com/800x600/?japan,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Tokyo Skytree: 35.7101, 139.8107</li><img alt="japan city" src="https://source.unsplash.com/800x600/?japan,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Miyajima Island: 34.2973, 132.3186</li><img alt="japan nature" src="https://source.unsplash.com/800x600/?japan,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
 </ul>
 </body>
 </html>
