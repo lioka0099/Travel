@@ -1,60 +1,72 @@
 ```html
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Thailand</title>
+<title>Thailand Travel Guide</title>
 <style>
-        img {
-            max-width: 100%;
-            height: auto;
-            margin: 10px;
-        }
         #map {
-            height: 400px;
+            height: 600px;
             width: 100%;
         }
     </style>
 </head>
 <body>
-<h1>Thailand</h1>
+<h1>Thailand Travel Guide</h1>
 
 
 
-<h2>Attractions</h2>
-<p><b>The Grand Palace</b>, located in Bangkok, is one of Thailand's most iconic landmarks and a must-visit attraction. It served as the official residence of the king and queen of Thailand since 1782. The palace is known for its elaborate architecture and intricate details.</p>
-<p><b>Wat Phra Kaew</b>, also in Bangkok, is a temple complex within the Grand Palace grounds. It's famous for housing the revered Emerald Buddha. The temple is rich in history and showcases stunning Thai architecture.</p>
-<p><b>Phuket Big Buddha</b>, situated on top of the Nakkerd Hills between Chalong and Kata, is a 45-meter tall marble Buddha statue. It is one of the most revered Buddha images in Thailand, symbolizing peace and stability.</p>
+<h2>Top Attractions in Thailand</h2>
+<ul>
+<li>
+<h3>The Grand Palace</h3>
+<p>City: Bangkok</p>
+<p>Fun Fact: The Grand Palace has been the official residence of the king and queen of Thailand since 1782.</p>
+</li><img alt="Thailand landscape" src="https://source.unsplash.com/800x600/?Thailand,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>
+<h3>Wat Phra Kaew</h3>
+<p>City: Bangkok</p>
+<p>Fun Fact: Wat Phra Kaew is home to the famous Emerald Buddha, a highly revered Buddha image in Thailand.</p>
+</li><img alt="Thailand city" src="https://source.unsplash.com/800x600/?Thailand,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>
+<h3>Phi Phi Islands</h3>
+<p>City: Krabi</p>
+<p>Fun Fact: The Phi Phi Islands were made famous by the movie "The Beach" starring Leonardo DiCaprio.</p>
+</li><img alt="Thailand nature" src="https://source.unsplash.com/800x600/?Thailand,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+</ul>
 <div id="map"></div>
+<h2>Coordinates</h2>
+<ul id="coordinates"></ul>
+<script src="https://maps.googleapis.com/maps/api/js?key=YAIzaSyDzvydw_zI6IIlVhwyiO05mh875l6I2UZ4"></script>
 <script>
         function initMap() {
-            const map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: 13.7563, lng: 100.5018 },
-                zoom: 6,
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 13.75, lng: 100.52},
+                zoom: 6
             });
-            const attractions = [
-                { name: "The Grand Palace", lat: 13.7510, lng: 100.4918 },
-                { name: "Wat Phra Kaew", lat: 13.7510, lng: 100.4923 },
-                { name: "Phuket Big Buddha", lat: 7.8273, lng: 98.3663 },
+            
+            var attractions = [
+                {name: 'The Grand Palace', lat: 13.7513, lng: 100.4914},
+                {name: 'Wat Phra Kaew', lat: 13.7513, lng: 100.4922},
+                {name: 'Phi Phi Islands', lat: 7.7364, lng: 98.7694}
             ];
-            attractions.forEach((attraction) => {
-                new google.maps.Marker({
-                    position: { lat: attraction.lat, lng: attraction.lng },
+            
+            attractions.forEach(function(attraction) {
+                var marker = new google.maps.Marker({
+                    position: {lat: attraction.lat, lng: attraction.lng},
                     map: map,
-                    title: attraction.name,
+                    title: attraction.name
                 });
+                
+                var coordList = document.getElementById('coordinates');
+                var coordItem = document.createElement('li');
+                coordItem.textContent = `${attraction.name}: ${attraction.lat}, ${attraction.lng}`;
+                coordList.appendChild(coordItem);
             });
         }
+        
+        google.maps.event.addDomListener(window, 'load', initMap);
     </script>
-<script async="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&amp;callback=initMap&amp;libraries=&amp;v=weekly"></script>
-<h2>Coordinates</h2>
-<ul>
-<li>The Grand Palace: 13.7510, 100.4918</li><img alt="Thailand landscape" src="https://source.unsplash.com/800x600/?Thailand,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Wat Phra Kaew: 13.7510, 100.4923</li><img alt="Thailand city" src="https://source.unsplash.com/800x600/?Thailand,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Phuket Big Buddha: 7.8273, 98.3663</li><img alt="Thailand nature" src="https://source.unsplash.com/800x600/?Thailand,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-</ul>
 </body>
 </html>
 ```
