@@ -4,42 +4,46 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Japan Travel Guide</title>
+<title>Argentina Travel Guide</title>
 <link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <style>
         img {
             width: 100%;
             height: auto;
-            margin: 10px 0;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-<h1>Discover Japan</h1>
+<h1>Argentina Travel Guide</h1>
 
 
 
-<h2>Must-Visit Attractions in Japan</h2>
-<p><b>Fushimi Inari Shrine</b>, Kyoto - Known for its thousands of vermilion torii gates, Fushimi Inari Shrine is a breathtaking sight. A fun fact about this shrine is that it's dedicated to Inari, the Shinto god of rice and industry.</p>
-<p><b>Meiji Shrine</b>, Tokyo - Dedicated to the deified spirits of Emperor Meiji and his wife, Empress Shoken, this shrine is a serene escape from the bustling city. Interestingly, the shrine is located in a tranquil forested area that was once a site for the Emperor's leisure activities.</p>
-<p><b>Kiyomizu-dera Temple</b>, Kyoto - A UNESCO World Heritage site, Kiyomizu-dera Temple is famous for its wooden stage protruding over the valley below, offering a panoramic view of Kyoto. The temple's name, which translates to "Pure Water Temple," is derived from the pure waters that run beneath it.</p>
+<h2>Top Attractions in Argentina</h2>
+<h3>Iguazú Falls, Misiones</h3>
+<p>Iguazú Falls is a breathtaking spectacle of 275 individual waterfalls, spanning almost 2 miles. A fun fact about Iguazú Falls is that it's surrounded by lush tropical rainforest, making it a unique ecosystem.</p>
+<h3>Teatro Colón, Buenos Aires</h3>
+<p>Teatro Colón is one of the world's most renowned opera houses, known for its stunning architecture and exceptional acoustics. An interesting fact about Teatro Colón is that it was considered one of the top five opera houses in the world upon its opening in 1908.</p>
+<h3>Perito Moreno Glacier, Santa Cruz</h3>
+<p>Perito Moreno Glacier is a majestic glacier located in Los Glaciares National Park, Patagonia. A fascinating fact about Perito Moreno Glacier is that it's one of the few glaciers in the world that's still growing, due to its unique location and climate conditions.</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
-        var map = L.map('map').setView([35.6895, 139.6917], 5);
+        var map = L.map('map').setView([-34.6037, -58.3816], 4);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: ' OpenStreetMap'
         }).addTo(map);
-
-        L.marker([34.9667, 135.7667]).addTo(map).bindPopup('Fushimi Inari Shrine');
-        L.marker([35.6764, 139.6994]).addTo(map).bindPopup('Meiji Shrine');
-        L.marker([34.9949, 135.7853]).addTo(map).bindPopup('Kiyomizu-dera Temple');
+        L.marker([-25.6953, -54.4367]).addTo(map).bindPopup('Iguazú Falls');
+        L.marker([-34.6037, -58.3816]).addTo(map).bindPopup('Teatro Colón');
+        L.marker([-50.4667, -73.0333]).addTo(map).bindPopup('Perito Moreno Glacier');
     </script>
 <h2>Attraction Coordinates</h2>
 <ul>
-<li>Fushimi Inari Shrine: 34.9667, 135.7667</li><img alt="japan landscape" src="https://source.unsplash.com/800x600/?japan,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Meiji Shrine: 35.6764, 139.6994</li><img alt="japan city" src="https://source.unsplash.com/800x600/?japan,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Kiyomizu-dera Temple: 34.9949, 135.7853</li><img alt="japan nature" src="https://source.unsplash.com/800x600/?japan,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Iguazú Falls: -25.6953, -54.4367</li><img alt="argentina landscape" src="https://source.unsplash.com/800x600/?argentina,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Teatro Colón: -34.6037, -58.3816</li><img alt="argentina city" src="https://source.unsplash.com/800x600/?argentina,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Perito Moreno Glacier: -50.4667, -73.0333</li><img alt="argentina nature" src="https://source.unsplash.com/800x600/?argentina,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
 </ul>
 </body>
 </html>
