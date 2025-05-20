@@ -8,9 +8,9 @@
 <title>Japan Travel Guide</title>
 <style>
         img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
-            margin: 10px;
+            margin: 20px 0;
         }
         #map {
             height: 400px;
@@ -24,21 +24,21 @@
 
 
 <h2>Top Attractions</h2>
-<p><b>Fushimi Inari Shrine</b>, located in Kyoto, is famous for its thousands of vermilion torii gates forming a tunnel up the mountain. It's a breathtaking sight, especially during sunrise or sunset. Visitors can hike up the mountain through the gates.</p>
-<p><b>Tokyo Skytree</b>, in Tokyo, is the tallest tower in the world, offering panoramic views of the city from its observation decks. It's a must-visit for its height and the excellent views it provides. The tower is surrounded by a beautiful park.</p>
-<p><b>Miyajima Island</b>, near Hiroshima, is known for its scenic beauty and historic landmarks, including the famous Itsukushima Shrine, which appears to be floating during high tide. The island is also home to friendly deer and beautiful beaches. Visitors can enjoy hiking and scenic boat rides.</p>
+<p><b>Fushimi Inari Shrine</b>, located in Kyoto, is famous for its thousands of vermilion torii gates that form a tunnel up the mountain. It's a breathtaking sight to walk through the gates and explore the shrine. The shrine is dedicated to Inari, the Shinto god of rice.</p>
+<p><b>Tokyo Tower</b>, situated in Tokyo, is a communications tower that stands 333 meters tall, offering stunning views of the city from its observation decks. It was built in 1958 and was inspired by the Eiffel Tower. Visitors can enjoy shopping and dining at the tower's facilities.</p>
+<p><b>Mount Fuji</b>, near Tokyo, is Japan's highest peak and a iconic symbol of the country. It's a popular destination for hiking and trekking, with several routes to the summit. The mountain is considered sacred and is surrounded by five lakes.</p>
 <h2>Map of Attractions</h2>
 <div id="map"></div>
 <script>
         function initMap() {
             const map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: 35.6895, lng: 139.7670 },
+                center: { lat: 35.6895, lng: 139.6917 },
                 zoom: 6,
             });
             const attractions = [
-                { lat: 34.9683, lng: 135.7749, name: "Fushimi Inari Shrine" },
-                { lat: 35.7101, lng: 139.8107, name: "Tokyo Skytree" },
-                { lat: 34.2973, lng: 132.3186, name: "Miyajima Island" },
+                { name: "Fushimi Inari Shrine", lat: 34.967143, lng: 135.772069 },
+                { name: "Tokyo Tower", lat: 35.659255, lng: 139.765415 },
+                { name: "Mount Fuji", lat: 35.3606, lng: 138.7274 },
             ];
             attractions.forEach((attraction) => {
                 new google.maps.Marker({
@@ -52,9 +52,9 @@
 <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&amp;callback=initMap&amp;libraries=&amp;v=weekly"></script>
 <h2>Attraction Coordinates</h2>
 <ul>
-<li>Fushimi Inari Shrine: 34.9683, 135.7749</li><img alt="japan landscape" src="https://source.unsplash.com/800x600/?japan,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Tokyo Skytree: 35.7101, 139.8107</li><img alt="japan city" src="https://source.unsplash.com/800x600/?japan,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Miyajima Island: 34.2973, 132.3186</li><img alt="japan nature" src="https://source.unsplash.com/800x600/?japan,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Fushimi Inari Shrine: 34.967143, 135.772069</li><img alt="japan landscape" src="https://source.unsplash.com/800x600/?japan,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Tokyo Tower: 35.659255, 139.765415</li><img alt="japan city" src="https://source.unsplash.com/800x600/?japan,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Mount Fuji: 35.3606, 138.7274</li><img alt="japan nature" src="https://source.unsplash.com/800x600/?japan,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
 </ul>
 </body>
 </html>
