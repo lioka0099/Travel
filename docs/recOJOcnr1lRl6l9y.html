@@ -1,17 +1,75 @@
-```html
-<option value="JP">Japan</option>
-<table>
-<tr>
-<th>Country</th>
-<td>Japan</td>
-</tr>
-<tr>
-<th>Capital</th>
-<td>Tokyo</td>
-</tr>
-<tr>
-<th>Continent</th>
-<td>Asia</td>
-</tr>
-</table>
-```
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Discover Japan</title>
+<style>
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<h1>Welcome to Japan</h1>
+<div class="images-container">
+
+
+
+</div>
+<h2>Must-visit Attractions</h2>
+<div class="attractions-container">
+<p>
+<strong>Tokyo Skytree</strong>, located in Tokyo, is the tallest tower in the world, standing at 634 meters. Fun fact: It is designed to withstand earthquakes and typhoons.
+        </p>
+<p>
+<strong>Fushimi Inari Shrine</strong>, situated in Kyoto, is famous for its thousands of vermilion torii gates. Fun fact: The shrine is dedicated to Inari, the Shinto god of rice.
+        </p>
+<p>
+<strong>Miyajima Island</strong>, near Hiroshima, is known for its scenic beauty and historic landmarks. Fun fact: The island is famous for its Itsukushima Shrine, which appears to be floating during high tide.
+        </p>
+</div>
+<h2>Map with Attractions</h2>
+<div id="map"></div>
+<h2>Attraction Coordinates</h2>
+<div class="coordinates-container">
+<ul>
+<li>Tokyo Skytree: 35.710063, 139.8107</li><img alt="japan landscape" src="https://source.unsplash.com/800x600/?japan,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Fushimi Inari Shrine: 34.967143, 135.772053</li><img alt="japan city" src="https://source.unsplash.com/800x600/?japan,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Miyajima Island (Itsukushima Shrine): 34.295556, 132.319722</li><img alt="japan nature" src="https://source.unsplash.com/800x600/?japan,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+</ul>
+</div>
+<script>
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 36.2048, lng: 138.2529 },
+                zoom: 6,
+            });
+
+            const attractions = [
+                { lat: 35.710063, lng: 139.8107, label: "Tokyo Skytree" },
+                { lat: 34.967143, lng: 135.772053, label: "Fushimi Inari Shrine" },
+                { lat: 34.295556, lng: 132.319722, label: "Miyajima Island" },
+            ];
+
+            attractions.forEach((attraction) => {
+                new google.maps.Marker({
+                    position: attraction,
+                    label: attraction.label,
+                    map: map,
+                });
+            });
+        }
+    </script>
+<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap&amp;libraries=&amp;v=weekly"></script>
+</body>
+</html>
