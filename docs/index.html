@@ -5,18 +5,13 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Japan Travel Guide</title>
-<link crossorigin="" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" rel="stylesheet"/>
-<script crossorigin="" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <style>
         img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: auto;
             margin: 10px 0;
-        }
-        #map {
-            height: 400px;
-            width: 100%;
         }
     </style>
 </head>
@@ -25,34 +20,26 @@
 
 
 
-<h2>Top Attractions</h2>
-<p><b>Tokyo Skytree, Tokyo</b>: At 634 meters tall, Tokyo Skytree is the tallest tower in the world and offers breathtaking views of the city.</p>
-<p><b>Fushimi Inari Shrine, Kyoto</b>: Famous for its thousands of vermilion torii gates, Fushimi Inari Shrine is a must-visit for any traveler to Japan.</p>
-<p><b>Miyajima Island, Hatsukaichi</b>: Known for its stunning scenery and historic landmarks, Miyajima Island is a popular day-trip destination from Hiroshima.</p>
-<div id="map"></div>
+<h2>Must-Visit Attractions in Japan</h2>
+<p><b>Fushimi Inari Shrine</b>, Kyoto - Known for its thousands of vermilion torii gates, Fushimi Inari Shrine is a breathtaking sight. A fun fact about this shrine is that it's dedicated to Inari, the Shinto god of rice and industry.</p>
+<p><b>Meiji Shrine</b>, Tokyo - Dedicated to the deified spirits of Emperor Meiji and his wife, Empress Shoken, this shrine is a serene escape from the bustling city. Interestingly, the shrine is located in a tranquil forested area that was once a site for the Emperor's leisure activities.</p>
+<p><b>Kiyomizu-dera Temple</b>, Kyoto - A UNESCO World Heritage site, Kiyomizu-dera Temple is famous for its wooden stage protruding over the valley below, offering a panoramic view of Kyoto. The temple's name, which translates to "Pure Water Temple," is derived from the pure waters that run beneath it.</p>
+<div id="map" style="width:100%; height:400px;"></div>
 <script>
-        var map = L.map('map').setView([36.2048, 138.2529], 6);
+        var map = L.map('map').setView([35.6895, 139.6917], 5);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
-            subdomains: ['a', 'b', 'c'],
-            apiKey: 'YOUR_API_KEY' // placeholder API key
+            attribution: ' OpenStreetMap'
         }).addTo(map);
 
-        var attractions = [
-            {name: 'Tokyo Skytree', lat: 35.7101, lng: 139.8107},
-            {name: 'Fushimi Inari Shrine', lat: 34.9678, lng: 135.7723},
-            {name: 'Miyajima Island', lat: 34.2953, lng: 132.3197}
-        ];
-
-        attractions.forEach(function(attraction) {
-            L.marker([attraction.lat, attraction.lng]).addTo(map).bindPopup(attraction.name);
-        });
+        L.marker([34.9667, 135.7667]).addTo(map).bindPopup('Fushimi Inari Shrine');
+        L.marker([35.6764, 139.6994]).addTo(map).bindPopup('Meiji Shrine');
+        L.marker([34.9949, 135.7853]).addTo(map).bindPopup('Kiyomizu-dera Temple');
     </script>
 <h2>Attraction Coordinates</h2>
 <ul>
-<li>Tokyo Skytree: 35.7101, 139.8107</li><img alt="japan landscape" src="https://source.unsplash.com/800x600/?japan,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Fushimi Inari Shrine: 34.9678, 135.7723</li><img alt="japan city" src="https://source.unsplash.com/800x600/?japan,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Miyajima Island: 34.2953, 132.3197</li><img alt="japan nature" src="https://source.unsplash.com/800x600/?japan,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Fushimi Inari Shrine: 34.9667, 135.7667</li><img alt="japan landscape" src="https://source.unsplash.com/800x600/?japan,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Meiji Shrine: 35.6764, 139.6994</li><img alt="japan city" src="https://source.unsplash.com/800x600/?japan,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Kiyomizu-dera Temple: 34.9949, 135.7853</li><img alt="japan nature" src="https://source.unsplash.com/800x600/?japan,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
 </ul>
 </body>
 </html>
