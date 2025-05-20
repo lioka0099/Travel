@@ -5,68 +5,78 @@
 <head>
 <title>Thailand Travel Guide</title>
 <style>
-        #map {
-            height: 600px;
-            width: 100%;
-        }
-    </style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #attractions {
+      margin-bottom: 20px;
+    }
+    .attraction {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
 <h1>Thailand Travel Guide</h1>
 
 
 
-<h2>Top Attractions in Thailand</h2>
-<ul>
-<li>
+<div id="attractions">
+<h2>Top Attractions</h2>
+<div class="attraction">
 <h3>The Grand Palace</h3>
 <p>City: Bangkok</p>
-<p>Fun Fact: The Grand Palace has been the official residence of the king and queen of Thailand since 1782.</p>
-</li><img alt="Thailand landscape" src="https://source.unsplash.com/800x600/?Thailand,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>
-<h3>Wat Phra Kaew</h3>
-<p>City: Bangkok</p>
-<p>Fun Fact: Wat Phra Kaew is home to the famous Emerald Buddha, a highly revered Buddha image in Thailand.</p>
-</li><img alt="Thailand city" src="https://source.unsplash.com/800x600/?Thailand,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>
-<h3>Phi Phi Islands</h3>
-<p>City: Krabi</p>
-<p>Fun Fact: The Phi Phi Islands were made famous by the movie "The Beach" starring Leonardo DiCaprio.</p>
-</li><img alt="Thailand nature" src="https://source.unsplash.com/800x600/?Thailand,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-</ul>
-<div id="map"></div>
-<h2>Coordinates</h2>
-<ul id="coordinates"></ul>
-<script src="https://maps.googleapis.com/maps/api/js?key=YAIzaSyDzvydw_zI6IIlVhwyiO05mh875l6I2UZ4"></script>
+<p>Fun Fact: The Grand Palace is one of Bangkok's most iconic landmarks and has been the official residence of the king and queen of Thailand since 1782.</p>
+</div>
+<div class="attraction">
+<h3>Wat Phra That Doi Suthep</h3>
+<p>City: Chiang Mai</p>
+<p>Fun Fact: Wat Phra That Doi Suthep is a Buddhist temple perched on a mountain peak, offering stunning views of Chiang Mai.</p>
+</div>
+<div class="attraction">
+<h3>Phuket Old Town</h3>
+<p>City: Phuket</p>
+<p>Fun Fact: Phuket Old Town is a charming area with Sino-Portuguese architecture, offering a glimpse into Phuket's rich history.</p>
+</div>
+</div>
+<div id="map" style="width:100%;height:400px;"></div>
 <script>
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 13.75, lng: 100.52},
-                zoom: 6
-            });
-            
-            var attractions = [
-                {name: 'The Grand Palace', lat: 13.7513, lng: 100.4914},
-                {name: 'Wat Phra Kaew', lat: 13.7513, lng: 100.4922},
-                {name: 'Phi Phi Islands', lat: 7.7364, lng: 98.7694}
-            ];
-            
-            attractions.forEach(function(attraction) {
-                var marker = new google.maps.Marker({
-                    position: {lat: attraction.lat, lng: attraction.lng},
-                    map: map,
-                    title: attraction.name
-                });
-                
-                var coordList = document.getElementById('coordinates');
-                var coordItem = document.createElement('li');
-                coordItem.textContent = `${attraction.name}: ${attraction.lat}, ${attraction.lng}`;
-                coordList.appendChild(coordItem);
-            });
-        }
-        
-        google.maps.event.addDomListener(window, 'load', initMap);
-    </script>
+    function initMap() {
+      var bangkok = {lat: 13.749722, lng: 100.493056};
+      var chiangMai = {lat: 18.806667, lng: 98.965};
+      var phuket = {lat: 7.883333, lng: 98.4};
+      
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 13.75, lng: 100.5},
+        zoom: 5
+      });
+      
+      var grandPalaceMarker = new google.maps.Marker({
+        position: bangkok,
+        map: map,
+        title: 'The Grand Palace'
+      });
+      
+      var watPhraThatDoiSuthepMarker = new google.maps.Marker({
+        position: chiangMai,
+        map: map,
+        title: 'Wat Phra That Doi Suthep'
+      });
+      
+      var phuketOldTownMarker = new google.maps.Marker({
+        position: phuket,
+        map: map,
+        title: 'Phuket Old Town'
+      });
+    }
+  </script>
+<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzvydw_zI6IIlVhwyiO05mh875l6I2UZ4&amp;callback=initMap"></script>
+<h2>Coordinates</h2>
+<ul>
+<li>The Grand Palace: 13.749722, 100.493056</li><img alt="Thailand landscape" src="https://source.unsplash.com/800x600/?Thailand,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Wat Phra That Doi Suthep: 18.806667, 98.965</li><img alt="Thailand city" src="https://source.unsplash.com/800x600/?Thailand,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Phuket Old Town: 7.883333, 98.4</li><img alt="Thailand nature" src="https://source.unsplash.com/800x600/?Thailand,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+</ul>
 </body>
 </html>
 ```
