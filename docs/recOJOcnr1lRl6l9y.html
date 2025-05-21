@@ -10,40 +10,41 @@
 <style>
         img {
             width: 100%;
-            height: 300px;
+            height: 200px;
             object-fit: cover;
             margin: 10px 0;
         }
     </style>
-</head>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/><style>
+          html, body, * {
+              font-family: 'Roboto', sans-serif !important;
+          }
+          </style></head>
 <body>
-<h1>Argentina Travel Guide</h1>
+<h1>Travel in Argentina</h1><h2>Top Attractions in Argentina</h2>
 
 
 
 <h2>Top Attractions in Argentina</h2>
-<h3>1. Teatro Colón, Buenos Aires</h3>
-<p>Teatro Colón is a world-renowned opera house in Buenos Aires, known for its stunning architecture and exceptional acoustics. One fun fact about Teatro Colón is that it was considered one of the top five opera houses in the world when it reopened in 2010 after a major renovation.</p>
-<h3>2. Iguazú Falls, Misiones</h3>
-<p>Iguazú Falls is a breathtaking waterfall system on the border of Argentina and Brazil. A fun fact about Iguazú Falls is that it's made up of over 275 individual waterfalls spanning almost 2 miles, making it one of the largest waterfall systems in the world.</p>
-<h3>3. Perito Moreno Glacier, Santa Cruz</h3>
-<p>Perito Moreno Glacier is a stunning glacier in Los Glaciares National Park, Patagonia. A fun fact about Perito Moreno Glacier is that it's one of the few glaciers in the world that's still growing, due to its unique location and the cold climate.</p>
+<p><strong>Teatro Colón, Buenos Aires</strong>: This world-renowned opera house is considered one of the greatest in the world, known for its stunning architecture and exceptional acoustics.</p>
+<p><strong>Iguazú Falls, Puerto Iguazú</strong>: Spanning over 2.7 kilometers, Iguazú Falls is a breathtaking spectacle of 275 individual waterfalls, surrounded by lush tropical rainforest.</p>
+<p><strong>Perito Moreno Glacier, El Calafate</strong>: This majestic glacier is one of the few in the world that is still growing, and visitors can walk on its surface or watch it calve into the lake.</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
         var map = L.map('map').setView([-34.6037, -58.3816], 4);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: ' OpenStreetMap'
         }).addTo(map);
-        
-        L.marker([-34.6011, -58.3827]).addTo(map).bindPopup('Teatro Colón');
-        L.marker([-25.6953, -54.4367]).addTo(map).bindPopup('Iguazú Falls');
-        L.marker([-50.4667, -73.0333]).addTo(map).bindPopup('Perito Moreno Glacier');
+
+        L.marker([-34.6011, -58.3723]).addTo(map).bindPopup('Teatro Colón');
+        L.marker([-25.6943, -54.4367]).addTo(map).bindPopup('Iguazú Falls');
+        L.marker([-50.4923, -73.0564]).addTo(map).bindPopup('Perito Moreno Glacier');
     </script>
 <h2>Attraction Coordinates</h2>
-<ul>
-<li>Teatro Colón: -34.6011, -58.3827</li><img alt="Argentina landscape" src="https://source.unsplash.com/800x600/?Argentina,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Iguazú Falls: -25.6953, -54.4367</li><img alt="Argentina city" src="https://source.unsplash.com/800x600/?Argentina,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Perito Moreno Glacier: -50.4667, -73.0333</li><img alt="Argentina nature" src="https://source.unsplash.com/800x600/?Argentina,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<ul style="display:flex; flex-wrap:wrap; gap:1rem; list-style:none; padding:0; margin:0;">
+<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Teatro Colón, Buenos Aires: -34.6011, -58.3723<img alt="Teatro Colón, Buenos Aires" src="https://images.unsplash.com/photo-1601319834779-d8310c17494f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MzAzNDd8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
+<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Iguazú Falls, Puerto Iguazú: -25.6943, -54.4367<img alt="Iguazú Falls, Puerto Iguazú" src="https://images.unsplash.com/photo-1539532163194-e59e38ead07f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MzAzNDd8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
+<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Perito Moreno Glacier, El Calafate: -50.4923, -73.0564<img alt="Perito Moreno Glacier, El Calafate" src="https://images.unsplash.com/photo-1582033507397-e0fc36d7c499?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MzAzNDh8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
 </ul>
 </body>
 </html>
