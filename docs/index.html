@@ -11,7 +11,7 @@
         img {
             width: 100%;
             height: auto;
-            margin: 10px 0;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -20,28 +20,26 @@
 
 
 
-<h2>Top Attractions</h2>
-<h3>Taj Mahal, Agra</h3>
-<p>The Taj Mahal is a mausoleum made of white marble, built by the Mughal emperor Shah Jahan in memory of his wife Mumtaz Mahal. It is considered one of the most beautiful examples of Mughal architecture, a blend of Indian, Persian, and Islamic styles.</p>
-<h3>Red Fort, Delhi</h3>
-<p>The Red Fort is a historic fort in Delhi, India, that served as the main residence of the Mughal emperors. It is a UNESCO World Heritage Site and is considered one of the most iconic landmarks in India.</p>
-<h3>Golden Temple, Amritsar</h3>
-<p>The Golden Temple, also known as Harmandir Sahib, is a gurudwara (Sikh temple) in Amritsar, Punjab. It is one of the most sacred sites in Sikhism and is known for its golden dome and beautiful architecture.</p>
+<h2>Must-visit Attractions</h2>
+<p><strong>Taj Mahal, Agra</strong>: The Taj Mahal changes color depending on the time of day and the weather, appearing pinkish in the morning, white during the day, and golden at night.</p>
+<p><strong>Varanasi Ghats, Varanasi</strong>: The Varanasi Ghats are a series of steep stairs leading down to the Ganges River, with over 80 ghats along the riverfront, each with its own significance.</p>
+<p><strong>Red Fort, Delhi</strong>: The Red Fort was built by Shah Jahan in 1648 and served as the main imperial palace of the Mughal Empire, showcasing a blend of Indian, Persian, and Islamic architectural styles.</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
         var map = L.map('map').setView([20.5937, 78.9629], 5);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: ' OpenStreetMap'
         }).addTo(map);
+        
         L.marker([27.1753, 78.0422]).addTo(map).bindPopup('Taj Mahal');
+        L.marker([25.2861, 83.0104]).addTo(map).bindPopup('Varanasi Ghats');
         L.marker([28.6562, 77.2410]).addTo(map).bindPopup('Red Fort');
-        L.marker([31.6199, 74.8764]).addTo(map).bindPopup('Golden Temple');
     </script>
 <h2>Attraction Coordinates</h2>
 <ul>
 <li>Taj Mahal: 27.1753, 78.0422</li><img alt="india landscape" src="https://source.unsplash.com/800x600/?india,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Red Fort: 28.6562, 77.2410</li><img alt="india city" src="https://source.unsplash.com/800x600/?india,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Golden Temple: 31.6199, 74.8764</li><img alt="india nature" src="https://source.unsplash.com/800x600/?india,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Varanasi Ghats: 25.2861, 83.0104</li><img alt="india city" src="https://source.unsplash.com/800x600/?india,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Red Fort: 28.6562, 77.2410</li><img alt="india nature" src="https://source.unsplash.com/800x600/?india,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
 </ul>
 </body>
 </html>
