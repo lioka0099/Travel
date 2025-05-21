@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Japan Travel Guide</title>
+<link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<style>
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<h1>Discover Japan</h1>
+
+
+
+<h2>Top Attractions</h2>
+<h3>Fushimi Inari Shrine, Kyoto</h3>
+<p>Fushimi Inari Shrine is famous for its thousands of vermilion torii gates that form a tunnel up the mountain. It's a breathtaking sight and a great spot for hiking.</p>
+<h3>Tokyo Skytree, Tokyo</h3>
+<p>Tokyo Skytree is the tallest tower in the world, standing at 634 meters. It offers panoramic views of the city from its observation decks.</p>
+<h3>Osaka Castle, Osaka</h3>
+<p>Osaka Castle is a majestic castle that played a crucial role in the unification of Japan. It now serves as a museum and a popular tourist destination.</p>
+<div id="map" style="width:100%; height:400px;"></div>
+<script>
+        var map = L.map('map').setView([34.6937, 135.5023], 6);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: ' OpenStreetMap'
+        }).addTo(map);
+        
+        L.marker([34.9671, 135.7742]).addTo(map).bindPopup('Fushimi Inari Shrine');
+        L.marker([35.7101, 139.8107]).addTo(map).bindPopup('Tokyo Skytree');
+        L.marker([34.6873, 135.5262]).addTo(map).bindPopup('Osaka Castle');
+    </script>
+<h2>Attraction Coordinates</h2>
+<ul>
+<li>Fushimi Inari Shrine: 34.9671, 135.7742</li><img alt="Japan landscape" src="https://source.unsplash.com/800x600/?Japan,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Tokyo Skytree: 35.7101, 139.8107</li><img alt="Japan city" src="https://source.unsplash.com/800x600/?Japan,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Osaka Castle: 34.6873, 135.5262</li><img alt="Japan nature" src="https://source.unsplash.com/800x600/?Japan,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+</ul>
+</body>
+</html>
