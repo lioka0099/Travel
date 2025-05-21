@@ -10,7 +10,8 @@
 <style>
         img {
             width: 100%;
-            height: auto;
+            height: 200px;
+            object-fit: cover;
             margin: 10px 0;
         }
     </style>
@@ -20,10 +21,10 @@
 
 
 
-<h2>Top Attractions in Spain</h2>
-<p><b>La Sagrada Familia</b>, Barcelona - La Sagrada Familia is a famous cathedral designed by Antoni Gaudí, known for its unique and intricate architecture. Fun fact: La Sagrada Familia has been under construction since 1882 and is expected to be completed by 2026.</p>
-<p><b>Alhambra</b>, Granada - The Alhambbra is a medieval Islamic palace and fortress complex, showcasing Moorish architecture. Fun fact: The Alhambra is considered one of the greatest examples of Islamic art and architecture in the world.</p>
-<p><b>Museo del Prado</b>, Madrid - The Museo del Prado is one of the world's greatest art museums, housing an extensive collection of European art. Fun fact: The Prado Museum has over 8,000 works of art on display, including masterpieces by Goya, Velázquez, and El Greco.</p>
+<h2>Top Attractions</h2>
+<p><b>Alhambra, Granada</b>: The Alhambra is a palace and fortress complex that was originally constructed as a small fortress in AD 889, and its current structure was built in the 14th century. One of its most fascinating facts is that it is an exemplar of Islamic architecture in Spain, showcasing intricate calligraphy and geometric patterns.</p>
+<p><b>Museo del Prado, Madrid</b>: The Museo del Prado is one of the world's greatest art museums, housing an extensive collection of European art from the 12th to the early 20th century. It is home to works by Goya, Velázquez, and El Greco, among others. A fun fact is that it attracts millions of visitors annually, making it one of the most visited museums in the world.</p>
+<p><b>Park Güell, Barcelona</b>: Park Güell is a public park featuring stunning architecture by Antoni Gaudí, famous for its mosaic benches and twisting stone columns. Initially intended as a residential project, it was converted into a public park in 1926. A fun fact is that the park's iconic mosaic benches were designed by Gaudí himself, offering breathtaking views of Barcelona.</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
         var map = L.map('map').setView([40.4168, -3.7038], 6);
@@ -31,15 +32,15 @@
             attribution: '© OpenStreetMap'
         }).addTo(map);
 
-        L.marker([41.4036, 2.1744]).addTo(map).bindPopup('La Sagrada Familia');
-        L.marker([37.1763, -3.5883]).addTo(map).bindPopup('Alhambra');
-        L.marker([40.4136, -3.6924]).addTo(map).bindPopup('Museo del Prado');
+        L.marker([37.1763, -3.5881]).addTo(map).bindPopup('Alhambra');
+        L.marker([40.4138, -3.6947]).addTo(map).bindPopup('Museo del Prado');
+        L.marker([41.4147, 2.1526]).addTo(map).bindPopup('Park Güell');
     </script>
 <h2>Attraction Coordinates</h2>
 <ul>
-<li>La Sagrada Familia: 41.4036, 2.1744</li>
-<li>Alhambra: 37.1763, -3.5883</li>
-<li>Museo del Prado: 40.4136, -3.6924</li>
+<li>Alhambra, Granada - 37.1763, -3.5881</li>
+<li>Museo del Prado, Madrid - 40.4138, -3.6947</li>
+<li>Park Güell, Barcelona - 41.4147, 2.1526</li>
 </ul>
 </body>
 </html>
