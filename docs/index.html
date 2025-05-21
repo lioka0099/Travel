@@ -4,46 +4,42 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Argentina Travel Guide</title>
+<title>Japan Travel Guide</title>
 <link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <style>
         img {
             width: 100%;
-            height: 300px;
-            object-fit: cover;
+            height: auto;
             margin: 10px 0;
         }
     </style>
 </head>
 <body>
-<h1>Argentina Travel Guide</h1>
+<h1>Discover Japan</h1>
 
 
 
-<h2>Top Attractions in Argentina</h2>
-<h3>1. Teatro Colón, Buenos Aires</h3>
-<p>Teatro Colón is a world-renowned opera house in Buenos Aires, known for its stunning architecture and exceptional acoustics. One fun fact about Teatro Colón is that it was considered one of the top five opera houses in the world when it reopened in 2010 after a major renovation.</p>
-<h3>2. Iguazú Falls, Misiones</h3>
-<p>Iguazú Falls is a breathtaking waterfall system on the border of Argentina and Brazil. A fun fact about Iguazú Falls is that it's made up of over 275 individual waterfalls spanning almost 2 miles, making it one of the largest waterfall systems in the world.</p>
-<h3>3. Perito Moreno Glacier, Santa Cruz</h3>
-<p>Perito Moreno Glacier is a stunning glacier in Los Glaciares National Park, Patagonia. A fun fact about Perito Moreno Glacier is that it's one of the few glaciers in the world that's still growing, due to its unique location and the cold climate.</p>
+<h2>Top Attractions</h2>
+<p><b>Tokyo Skytree</b>, Tokyo - Standing at 634 meters tall, Tokyo Skytree is the tallest tower in the world and offers breathtaking views of the city.</p>
+<p><b>Fushimi Inari Shrine</b>, Kyoto - Famous for its thousands of vermilion torii gates that form a tunnel up the mountain, Fushimi Inari is a must-visit for any traveler.</p>
+<p><b>Kiyomizu-dera Temple</b>, Kyoto - This UNESCO World Heritage site is famous for its wooden stage protruding over the valley below, offering a panoramic view of Kyoto.</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
-        var map = L.map('map').setView([-34.6037, -58.3816], 4);
+        var map = L.map('map').setView([35.6895, 139.6917], 13);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: ' OpenStreetMap'
         }).addTo(map);
-        
-        L.marker([-34.6011, -58.3827]).addTo(map).bindPopup('Teatro Colón');
-        L.marker([-25.6953, -54.4367]).addTo(map).bindPopup('Iguazú Falls');
-        L.marker([-50.4667, -73.0333]).addTo(map).bindPopup('Perito Moreno Glacier');
+
+        L.marker([35.7101, 139.8107]).addTo(map).bindPopup('Tokyo Skytree');
+        L.marker([34.9671, 135.7737]).addTo(map).bindPopup('Fushimi Inari Shrine');
+        L.marker([34.9949, 135.7851]).addTo(map).bindPopup('Kiyomizu-dera Temple');
     </script>
 <h2>Attraction Coordinates</h2>
 <ul>
-<li>Teatro Colón: -34.6011, -58.3827</li><img alt="Argentina landscape" src="https://source.unsplash.com/800x600/?Argentina,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Iguazú Falls: -25.6953, -54.4367</li><img alt="Argentina city" src="https://source.unsplash.com/800x600/?Argentina,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Perito Moreno Glacier: -50.4667, -73.0333</li><img alt="Argentina nature" src="https://source.unsplash.com/800x600/?Argentina,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Tokyo Skytree: 35.7101, 139.8107</li><img alt="japan landscape" src="https://source.unsplash.com/800x600/?japan,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Fushimi Inari Shrine: 34.9671, 135.7737</li><img alt="japan city" src="https://source.unsplash.com/800x600/?japan,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Kiyomizu-dera Temple: 34.9949, 135.7851</li><img alt="japan nature" src="https://source.unsplash.com/800x600/?japan,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
 </ul>
 </body>
 </html>
