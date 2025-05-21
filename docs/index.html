@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Spain Travel Guide</title>
 <link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <style>
         img {
             width: 100%;
-            height: auto;
-            margin: 20px 0;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -18,26 +21,29 @@
 
 
 
-<h2>Top Attractions</h2>
-<p><b>Alhambra</b>, Granada - The Alhambra is a palace and fortress complex that contains some of the most remarkable Islamic architecture in the world, with intricate stone carvings and serene gardens.</p>
-<p><b>Casa Batlló</b>, Barcelona - Casa Batlló is a famous house designed by Antoni Gaudí, known for its colorful facade, irregular windows, and unique architectural style that has become a symbol of Barcelona.</p>
-<p><b>Santiago de Compostela Cathedral</b>, Santiago de Compostela - The Santiago de Compostela Cathedral is a magnificent Gothic cathedral that is said to contain the remains of Saint James the Greater, making it a major pilgrimage site.</p>
+<h2>Top Attractions in Spain</h2>
+<h3>La Sagrada Familia, Barcelona</h3>
+<p>La Sagrada Familia is a famous cathedral designed by Antoni Gaudí, known for its unique and intricate architecture. Fun fact: It has been under construction since 1882 and is expected to be completed by 2026.</p>
+<h3>Alhambra, Granada</h3>
+<p>The Alhambra is a medieval Islamic palace and fortress complex that showcases Moorish architecture. Fun fact: It is one of the most visited monuments in Spain, attracting millions of visitors each year.</p>
+<h3>Museo del Prado, Madrid</h3>
+<p>The Museo del Prado is one of the world's greatest art museums, housing an extensive collection of European art. Fun fact: It contains over 8,000 works of art, including masterpieces by Goya, Velázquez, and El Greco.</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
         var map = L.map('map').setView([40.4168, -3.7038], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: ' OpenStreetMap'
+            attribution: '&copy; OpenStreetMap'
         }).addTo(map);
-        
-        L.marker([37.1763, -3.5883]).addTo(map).bindPopup('Alhambra');
-        L.marker([41.3917, 2.1653]).addTo(map).bindPopup('Casa Batlló');
-        L.marker([42.8804, -8.5457]).addTo(map).bindPopup('Santiago de Compostela Cathedral');
+
+        L.marker([41.4036, 2.1744]).addTo(map).bindPopup('La Sagrada Familia');
+        L.marker([37.1767, -3.5944]).addTo(map).bindPopup('Alhambra');
+        L.marker([40.4136, -3.6924]).addTo(map).bindPopup('Museo del Prado');
     </script>
 <h2>Attraction Coordinates</h2>
 <ul>
-<li>Alhambra: 37.1763, -3.5883<img alt="Alhambra" src="https://images.unsplash.com/photo-1617653771741-eaa58c05e923?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTQ1NTF8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
-<li>Casa Batlló: 41.3917, 2.1653<img alt="Casa Batlló" src="https://images.unsplash.com/photo-1712948222029-0adcb62c8a87?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTQ1NTJ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
-<li>Santiago de Compostela Cathedral: 42.8804, -8.5457<img alt="Santiago de Compostela Cathedral" src="https://images.unsplash.com/photo-1646342170606-adc0892084d1?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTQ1NTJ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
+<li>La Sagrada Familia: 41.4036, 2.1744<img alt="La Sagrada Familia" src="https://images.unsplash.com/photo-1596825805421-174f76b3c0d8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTUzODV8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
+<li>Alhambra: 37.1767, -3.5944<img alt="Alhambra" src="https://images.unsplash.com/photo-1599897705618-514cd6d772b8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTUzODZ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
+<li>Museo del Prado: 40.4136, -3.6924<img alt="Museo del Prado" src="https://images.unsplash.com/photo-1737972370834-df554d2ae97b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTUzODZ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
 </ul>
 </body>
 </html>
