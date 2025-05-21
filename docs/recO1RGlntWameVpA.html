@@ -22,25 +22,25 @@
 
 
 <h2>Top Attractions</h2>
-<p><b>Alhambra, Granada</b>: The Alhambra is a palace and fortress complex that was originally constructed as a small fortress in AD 889, and its current structure was built in the 14th century. One of its most fascinating facts is that it is an exemplar of Islamic architecture in Spain, showcasing intricate calligraphy and geometric patterns.</p>
-<p><b>Museo del Prado, Madrid</b>: The Museo del Prado is one of the world's greatest art museums, housing an extensive collection of European art from the 12th to the early 20th century. It is home to works by Goya, Velázquez, and El Greco, among others. A fun fact is that it attracts millions of visitors annually, making it one of the most visited museums in the world.</p>
-<p><b>Park Güell, Barcelona</b>: Park Güell is a public park featuring stunning architecture by Antoni Gaudí, famous for its mosaic benches and twisting stone columns. Initially intended as a residential project, it was converted into a public park in 1926. A fun fact is that the park's iconic mosaic benches were designed by Gaudí himself, offering breathtaking views of Barcelona.</p>
+<p><b>La Sagrada Familia</b>, Barcelona - Did you know that La Sagrada Familia is still under construction and is expected to be completed by 2026, marking the centenary of Antoni Gaudí's death?</p>
+<p><b>Alhambra</b>, Granada - The Alhambra is a palace and fortress complex that showcases Moorish architecture, and its name comes from the Arabic 'al-Hamra', meaning 'the red one', likely due to the reddish color of its walls.</p>
+<p><b>Museo del Prado</b>, Madrid - The Museo del Prado is home to an extensive collection of European art, including works by Goya, Velázquez, and El Greco, making it one of the world's greatest museums.</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
-        var map = L.map('map').setView([40.4168, -3.7038], 6);
+        var map = L.map('map').setView([40.4168, -3.7038], 5);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap'
         }).addTo(map);
 
-        L.marker([37.1763, -3.5881]).addTo(map).bindPopup('Alhambra');
-        L.marker([40.4138, -3.6947]).addTo(map).bindPopup('Museo del Prado');
-        L.marker([41.4147, 2.1526]).addTo(map).bindPopup('Park Güell');
+        L.marker([41.4036, 2.1744]).addTo(map).bindPopup('La Sagrada Familia');
+        L.marker([37.1833, -3.6]).addTo(map).bindPopup('Alhambra');
+        L.marker([40.4133, -3.6923]).addTo(map).bindPopup('Museo del Prado');
     </script>
 <h2>Attraction Coordinates</h2>
 <ul>
-<li>Alhambra, Granada - 37.1763, -3.5881</li>
-<li>Museo del Prado, Madrid - 40.4138, -3.6947</li>
-<li>Park Güell, Barcelona - 41.4147, 2.1526</li>
+<li>La Sagrada Familia: 41.4036, 2.1744</li>
+<li>Alhambra: 37.1833, -3.6</li>
+<li>Museo del Prado: 40.4133, -3.6923</li>
 </ul>
 </body>
 </html>
