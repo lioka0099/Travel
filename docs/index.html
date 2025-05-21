@@ -4,42 +4,42 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Travel to Japan</title>
+<title>Japan Travel Guide</title>
 <link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <style>
         img {
             width: 100%;
-            height: 200px;
+            height: 300px;
             object-fit: cover;
-            margin: 10px 0;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-<h1>Welcome to Japan</h1>
+<h1>Discover Japan</h1>
 
 
 
-<h2>Top Attractions</h2>
-<p><b>Fushimi Inari Shrine</b>, Kyoto - Known for its thousands of vermilion torii gates that form a tunnel up the mountain.</p>
-<p><b>Shibuya Crossing</b>, Tokyo - One of the busiest intersections in the world, known for its buskers, street food, and fashionable crowds.</p>
-<p><b>Kiyomizu-dera Temple</b>, Kyoto - A UNESCO World Heritage site famous for its wooden stage protruding over the valley below, offering a panoramic view of Kyoto.</p>
+<h2>Top Attractions in Japan</h2>
+<p><b>Fushimi Inari Shrine</b>, Kyoto - Famous for its thousands of vermillion torii gates that form a tunnel up the mountain.</p>
+<p><b>Meiji Shrine</b>, Tokyo - Dedicated to the deified spirits of Emperor Meiji and his wife, Empress Shoken, it's a serene escape from the bustling city.</p>
+<p><b>Kiyomizu-dera Temple</b>, Kyoto - A UNESCO World Heritage site, it's famous for its wooden stage protruding over the valley below, offering a panoramic view of Kyoto.</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
-        var map = L.map('map').setView([35.6895, 139.6917], 13);
+        var map = L.map('map').setView([35.6895, 139.6917], 5);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: ' OpenStreetMap'
         }).addTo(map);
 
-        L.marker([34.9683, 135.7722]).addTo(map).bindPopup('Fushimi Inari Shrine');
-        L.marker([35.6591, 139.7039]).addTo(map).bindPopup('Shibuya Crossing');
+        L.marker([34.9673, 135.7724]).addTo(map).bindPopup('Fushimi Inari Shrine');
+        L.marker([35.6764, 139.6994]).addTo(map).bindPopup('Meiji Shrine');
         L.marker([34.9949, 135.7851]).addTo(map).bindPopup('Kiyomizu-dera Temple');
     </script>
 <h2>Attraction Coordinates</h2>
 <ul>
-<li>Fushimi Inari Shrine: 34.9683, 135.7722</li><img alt="japan landscape" src="https://source.unsplash.com/800x600/?japan,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Shibuya Crossing: 35.6591, 139.7039</li><img alt="japan city" src="https://source.unsplash.com/800x600/?japan,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Fushimi Inari Shrine: 34.9673, 135.7724</li><img alt="japan landscape" src="https://source.unsplash.com/800x600/?japan,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Meiji Shrine: 35.6764, 139.6994</li><img alt="japan city" src="https://source.unsplash.com/800x600/?japan,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
 <li>Kiyomizu-dera Temple: 34.9949, 135.7851</li><img alt="japan nature" src="https://source.unsplash.com/800x600/?japan,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
 </ul>
 </body>
