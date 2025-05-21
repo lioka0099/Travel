@@ -4,42 +4,43 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>India Travel Guide</title>
+<title>Travel to Japan</title>
 <link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <style>
         img {
             width: 100%;
-            height: auto;
-            margin: 20px 0;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
-<h1>Discover India</h1>
+<h1>Welcome to Japan</h1>
 
 
 
-<h2>Must-visit Attractions</h2>
-<p><strong>Taj Mahal, Agra</strong>: The Taj Mahal changes color depending on the time of day and the weather, appearing pinkish in the morning, white during the day, and golden at night.</p>
-<p><strong>Varanasi Ghats, Varanasi</strong>: The Varanasi Ghats are a series of steep stairs leading down to the Ganges River, with over 80 ghats along the riverfront, each with its own significance.</p>
-<p><strong>Red Fort, Delhi</strong>: The Red Fort was built by Shah Jahan in 1648 and served as the main imperial palace of the Mughal Empire, showcasing a blend of Indian, Persian, and Islamic architectural styles.</p>
+<h2>Top Attractions</h2>
+<p><b>Fushimi Inari Shrine</b>, Kyoto - Known for its thousands of vermilion torii gates that form a tunnel up the mountain.</p>
+<p><b>Shibuya Crossing</b>, Tokyo - One of the busiest intersections in the world, known for its buskers, street food, and fashionable crowds.</p>
+<p><b>Kiyomizu-dera Temple</b>, Kyoto - A UNESCO World Heritage site famous for its wooden stage protruding over the valley below, offering a panoramic view of Kyoto.</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
-        var map = L.map('map').setView([20.5937, 78.9629], 5);
+        var map = L.map('map').setView([35.6895, 139.6917], 13);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: ' OpenStreetMap'
         }).addTo(map);
-        
-        L.marker([27.1753, 78.0422]).addTo(map).bindPopup('Taj Mahal');
-        L.marker([25.2861, 83.0104]).addTo(map).bindPopup('Varanasi Ghats');
-        L.marker([28.6562, 77.2410]).addTo(map).bindPopup('Red Fort');
+
+        L.marker([34.9683, 135.7722]).addTo(map).bindPopup('Fushimi Inari Shrine');
+        L.marker([35.6591, 139.7039]).addTo(map).bindPopup('Shibuya Crossing');
+        L.marker([34.9949, 135.7851]).addTo(map).bindPopup('Kiyomizu-dera Temple');
     </script>
 <h2>Attraction Coordinates</h2>
 <ul>
-<li>Taj Mahal: 27.1753, 78.0422</li><img alt="india landscape" src="https://source.unsplash.com/800x600/?india,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Varanasi Ghats: 25.2861, 83.0104</li><img alt="india city" src="https://source.unsplash.com/800x600/?india,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Red Fort: 28.6562, 77.2410</li><img alt="india nature" src="https://source.unsplash.com/800x600/?india,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Fushimi Inari Shrine: 34.9683, 135.7722</li><img alt="japan landscape" src="https://source.unsplash.com/800x600/?japan,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Shibuya Crossing: 35.6591, 139.7039</li><img alt="japan city" src="https://source.unsplash.com/800x600/?japan,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Kiyomizu-dera Temple: 34.9949, 135.7851</li><img alt="japan nature" src="https://source.unsplash.com/800x600/?japan,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
 </ul>
 </body>
 </html>
