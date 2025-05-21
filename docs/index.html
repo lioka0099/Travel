@@ -11,7 +11,8 @@
         img {
             width: 100%;
             height: auto;
-            margin: 10px 0;
+            max-width: 300px;
+            margin: 10px;
         }
     </style>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/><style>
@@ -24,26 +25,26 @@
 
 
 
-<h2>Top Attractions in Spain</h2>
-<p><b>Alhambra, Granada</b>: The Alhambbra is a palace and fortress complex that showcases Moorish architecture, featuring intricate Islamic calligraphy and geometric patterns.</p>
-<p><b>Sagrada Familia, Barcelona</b>: Antoni Gaudí's iconic cathedral is known for its unique and intricate design, taking over 130 years to complete.</p>
-<p><b>Museo del Prado, Madrid</b>: As one of the world's greatest art museums, the Prado features an extensive collection of European art, including works by Goya, Velázquez, and El Greco.</p>
+<h2>Top Attractions</h2>
+<p><b>Alhambra, Granada</b>: The Alhambra is a palace and fortress complex that was originally constructed as a small fortress in AD 889. One fun fact about the Alhambra is that it is considered one of the most important Islamic architecture monuments in the world.</p>
+<p><b>Museo del Prado, Madrid</b>: The Museo del Prado is the main Spanish national art museum, located in Madrid. A fun fact about the Museo del Prado is that it houses an extensive collection of works by Goya, including his famous 'The Third of May 1808'.</p>
+<p><b>La Sagrada Familia, Barcelona</b>: La Sagrada Familia is a large unfinished Catholic church designed by Antoni Gaudí. A fun fact about La Sagrada Familia is that it is expected to be completed by 2026, marking the centenary of Gaudí's death.</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
         var map = L.map('map').setView([40.4168, -3.7038], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap'
         }).addTo(map);
-
-        L.marker([37.1749, -3.5943]).addTo(map).bindPopup('Alhambra');
-        L.marker([41.4036, 2.1744]).addTo(map).bindPopup('Sagrada Familia');
-        L.marker([40.4141, -3.6924]).addTo(map).bindPopup('Museo del Prado');
+        
+        L.marker([37.1763, -3.5881]).addTo(map).bindPopup('Alhambra');
+        L.marker([40.4136, -3.6924]).addTo(map).bindPopup('Museo del Prado');
+        L.marker([41.4036, 2.1744]).addTo(map).bindPopup('La Sagrada Familia');
     </script>
 <h2>Attraction Coordinates</h2>
 <ul>
-<li>Alhambra, Granada: 37.1749, -3.5943<img alt="Alhambra, Granada" src="https://images.unsplash.com/photo-1728641589161-5572e8e368b1?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTgxNzd8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
-<li>Sagrada Familia, Barcelona: 41.4036, 2.1744<img alt="Sagrada Familia, Barcelona" src="https://images.unsplash.com/photo-1530482054429-cc491f61333b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTgxNzh8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
-<li>Museo del Prado, Madrid: 40.4141, -3.6924<img alt="Museo del Prado, Madrid" src="https://images.unsplash.com/photo-1730826563930-b83085813097?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTgxNzh8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
+<li>Alhambra, Granada: 37.1763, -3.5881<img alt="Alhambra, Granada" src="https://images.unsplash.com/photo-1725881283249-c77cc5183168?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTgzNDR8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
+<li>Museo del Prado, Madrid: 40.4136, -3.6924<img alt="Museo del Prado, Madrid" src="https://images.unsplash.com/photo-1706756141867-6a41b7c97376?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTgzNDV8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
+<li>La Sagrada Familia, Barcelona: 41.4036, 2.1744<img alt="La Sagrada Familia, Barcelona" src="https://images.unsplash.com/photo-1720018958562-4ba7e36531b2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTgzNDd8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
 </ul>
 </body>
 </html>
