@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Spain Travel Guide</title>
 <link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <style>
         img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
-            margin: 10px 0;
+            height: auto;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -21,29 +18,26 @@
 
 
 
-<h2>Must-Visit Attractions</h2>
-<h3>Alhambra, Granada</h3>
-<p>The Alhambra is a breathtaking palace and fortress complex that showcases Moorish architecture. A fun fact about Alhambra is that its name translates to "the red one" due to the reddish color of its walls.</p>
-<h3>Museo del Prado, Madrid</h3>
-<p>The Museo del Prado is one of the world's greatest art museums, housing an extensive collection of European art. Interestingly, the Prado has over 8,000 works on display, including masterpieces by Goya, Velázquez, and El Greco.</p>
-<h3>Park Güell, Barcelona</h3>
-<p>Park Güell is a public park featuring stunning architecture by Antoni Gaudí. Did you know that the park was originally intended to be a residential development, but it was converted into a public park due to lack of interest?</p>
+<h2>Top Attractions</h2>
+<p><b>Alhambra</b>, Granada - The Alhambra is a palace and fortress complex that contains some of the most remarkable Islamic architecture in the world, with intricate stone carvings and serene gardens.</p>
+<p><b>Casa Batlló</b>, Barcelona - Casa Batlló is a famous house designed by Antoni Gaudí, known for its colorful facade, irregular windows, and unique architectural style that has become a symbol of Barcelona.</p>
+<p><b>Santiago de Compostela Cathedral</b>, Santiago de Compostela - The Santiago de Compostela Cathedral is a magnificent Gothic cathedral that is said to contain the remains of Saint James the Greater, making it a major pilgrimage site.</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
         var map = L.map('map').setView([40.4168, -3.7038], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap'
+            attribution: ' OpenStreetMap'
         }).addTo(map);
-
+        
         L.marker([37.1763, -3.5883]).addTo(map).bindPopup('Alhambra');
-        L.marker([40.4136, -3.6924]).addTo(map).bindPopup('Museo del Prado');
-        L.marker([41.4147, 2.1526]).addTo(map).bindPopup('Park Güell');
+        L.marker([41.3917, 2.1653]).addTo(map).bindPopup('Casa Batlló');
+        L.marker([42.8804, -8.5457]).addTo(map).bindPopup('Santiago de Compostela Cathedral');
     </script>
 <h2>Attraction Coordinates</h2>
 <ul>
-<li>Alhambra, Granada - 37.1763, -3.5883<img alt="Alhambra, Granada - 37.1763, -3.5883" src="https://images.unsplash.com/photo-1741046492588-3e645e1b8c8f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTM2MTZ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
-<li>Museo del Prado, Madrid - 40.4136, -3.6924<img alt="Museo del Prado, Madrid - 40.4136, -3.6924" src="https://images.unsplash.com/photo-1575713076235-8a4ea6500645?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTM2MTd8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
-<li>Park Güell, Barcelona - 41.4147, 2.1526<img alt="Park Güell, Barcelona - 41.4147, 2.1526" src="https://images.unsplash.com/photo-1687258840108-4de7a2f39cd4?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTM2MTd8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
+<li>Alhambra: 37.1763, -3.5883<img alt="Alhambra" src="https://images.unsplash.com/photo-1617653771741-eaa58c05e923?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTQ1NTF8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
+<li>Casa Batlló: 41.3917, 2.1653<img alt="Casa Batlló" src="https://images.unsplash.com/photo-1712948222029-0adcb62c8a87?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTQ1NTJ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
+<li>Santiago de Compostela Cathedral: 42.8804, -8.5457<img alt="Santiago de Compostela Cathedral" src="https://images.unsplash.com/photo-1646342170606-adc0892084d1?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTQ1NTJ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
 </ul>
 </body>
 </html>
