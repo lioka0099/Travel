@@ -17,30 +17,33 @@
     </style>
 </head>
 <body>
-<h1>Discover Spain</h1>
-<img alt="Spain Landscape" src="https://source.unsplash.com/1600x900/?Spain"/>
-<img alt="Spanish Cityscape" src="https://picsum.photos/800/600?random=1"/>
-<img alt="Spanish Culture" src="https://unsplash.it/1200/400/?random=2"/>
-<h2>Top Attractions in Spain</h2>
-<p><strong>La Sagrada Familia</strong> in Barcelona is a famous cathedral known for its unique and unfinished architecture. Fun fact: It's been under construction since 1882.</p>
-<p><strong>Alhambra</strong> in Granada is a medieval Islamic palace that showcases Moorish architecture. Fun fact: The name 'Alhambra' means 'the red one' due to its reddish walls.</p>
-<p><strong>Museo del Prado</strong> in Madrid is one of the world's greatest art museums, featuring works by Goya, Velázquez, and El Greco. Fun fact: It has a collection of over 8,000 paintings.</p>
+<h1>Discover Spain</h1><h2>Top Attractions in Spain</h2>
+
+
+
+<h2>Must-Visit Attractions</h2>
+<h3>Alhambra, Granada</h3>
+<p>The Alhambra is a breathtaking palace and fortress complex that showcases Moorish architecture. A fun fact about Alhambra is that its name translates to "the red one" due to the reddish color of its walls.</p>
+<h3>Museo del Prado, Madrid</h3>
+<p>The Museo del Prado is one of the world's greatest art museums, housing an extensive collection of European art. Interestingly, the Prado has over 8,000 works on display, including masterpieces by Goya, Velázquez, and El Greco.</p>
+<h3>Park Güell, Barcelona</h3>
+<p>Park Güell is a public park featuring stunning architecture by Antoni Gaudí. Did you know that the park was originally intended to be a residential development, but it was converted into a public park due to lack of interest?</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
-        var map = L.map('map').setView([40.4168, -3.7038], 5);
+        var map = L.map('map').setView([40.4168, -3.7038], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap'
+            attribution: '© OpenStreetMap'
         }).addTo(map);
 
-        L.marker([41.4036, 2.1744]).addTo(map).bindPopup('La Sagrada Familia');
-        L.marker([37.1833, -3.6]).addTo(map).bindPopup('Alhambra');
-        L.marker([40.4133, -3.6922]).addTo(map).bindPopup('Museo del Prado');
+        L.marker([37.1763, -3.5883]).addTo(map).bindPopup('Alhambra');
+        L.marker([40.4136, -3.6924]).addTo(map).bindPopup('Museo del Prado');
+        L.marker([41.4147, 2.1526]).addTo(map).bindPopup('Park Güell');
     </script>
 <h2>Attraction Coordinates</h2>
 <ul>
-<li>La Sagrada Familia - 41.4036, 2.1744<img alt="La Sagrada Familia - 41.4036, 2.1744" src="https://images.unsplash.com/photo-1596133035669-10dc9e89376a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTI2NDB8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
-<li>Alhambra - 37.1833, -3.6<img alt="Alhambra - 37.1833, -3.6" src="https://images.unsplash.com/photo-1728641589128-c1ae176b477b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTI2NDF8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
-<li>Museo del Prado - 40.4133, -3.6922<img alt="Museo del Prado - 40.4133, -3.6922" src="https://images.unsplash.com/photo-1653967834649-e19501643f2f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTI2NDF8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
+<li>Alhambra, Granada - 37.1763, -3.5883<img alt="Alhambra, Granada - 37.1763, -3.5883" src="https://images.unsplash.com/photo-1741046492588-3e645e1b8c8f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTM2MTZ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
+<li>Museo del Prado, Madrid - 40.4136, -3.6924<img alt="Museo del Prado, Madrid - 40.4136, -3.6924" src="https://images.unsplash.com/photo-1575713076235-8a4ea6500645?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTM2MTd8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
+<li>Park Güell, Barcelona - 41.4147, 2.1526<img alt="Park Güell, Barcelona - 41.4147, 2.1526" src="https://images.unsplash.com/photo-1687258840108-4de7a2f39cd4?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTM2MTd8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="max-width:100%; margin:0.5rem 0; display:block;"/></li>
 </ul>
 </body>
 </html>
