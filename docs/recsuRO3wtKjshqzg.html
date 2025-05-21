@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Israel Travel Guide</title>
 <link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <style>
-    img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      margin: 10px 0;
-    }
-  </style>
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px 0;
+        }
+    </style>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/><style>
           html, body, * {
               font-family: 'Roboto', sans-serif !important;
@@ -24,31 +26,25 @@
 
 
 
-<p>
-<strong>Masada, Southern District</strong> - Masada is an ancient fortress located on a plateau in the Judean Desert, near the Dead Sea. Fun fact: Masada was the site of a famous siege by the Roman Empire in 73 CE.
-  </p>
-<p>
-<strong>The Western Wall, Jerusalem</strong> - The Western Wall is a sacred site in Judaism, located in the Old City of Jerusalem. Fun fact: The Western Wall is the last remaining wall of the Second Temple, destroyed by the Romans in 70 CE.
-  </p>
-<p>
-<strong>Old Jaffa, Tel Aviv</strong> - Old Jaffa is a historic neighborhood in Tel Aviv, known for its narrow streets, ancient architecture, and artistic community. Fun fact: Old Jaffa has been a source of inspiration for many artists and writers, including S.Y. Agnon, Israel's first Nobel laureate.
-  </p>
+<p><b>Masada, Masada National Park</b>: Located near the Dead Sea, Masada is an ancient fortification on a rocky plateau, famous for its historical significance and breathtaking sunrises. Fun fact: Masada was the site of a heroic last stand by Jewish rebels against the Roman Empire.</p>
+<p><b>The Western Wall, Jerusalem</b>: A sacred site in Judaism, the Western Wall is a remaining wall of the Second Temple, attracting millions of visitors each year. Fun fact: The wall is also known as the Wailing Wall due to the traditional Jewish practice of lamenting the destruction of the Temple.</p>
+<p><b>Akko (Acre) Old City, Acre</b>: A historic city with a rich cultural heritage, Akko's Old City is a UNESCO World Heritage Site, featuring ancient architecture, including Crusader-era structures. Fun fact: Akko has been an important port city for thousands of years, with a history dating back to the Phoenicians.</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
-    var map = L.map('map').setView([31.7833, 35.2167], 8);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap'
-    }).addTo(map);
+        var map = L.map('map').setView([31.5, 34.75], 8);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap'
+        }).addTo(map);
 
-    L.marker([31.3149, 35.2404]).addTo(map).bindPopup('Masada');
-    L.marker([31.7767, 35.2345]).addTo(map).bindPopup('The Western Wall');
-    L.marker([32.0543, 34.7514]).addTo(map).bindPopup('Old Jaffa');
-  </script>
+        L.marker([31.3147, 35.3542]).addTo(map).bindPopup('Masada');
+        L.marker([31.7767, 35.2345]).addTo(map).bindPopup('The Western Wall');
+        L.marker([32.9214, 35.0694]).addTo(map).bindPopup('Akko (Acre) Old City');
+    </script>
 <h2>Attraction Coordinates</h2>
-<ul>
-<li>Masada, Southern District: 31.3149, 35.2404<img alt="Masada, Southern District" src="https://images.unsplash.com/photo-1545597763-c5c3fc014dba?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MjA0OTF8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
-<li>The Western Wall, Jerusalem: 31.7767, 35.2345<img alt="The Western Wall, Jerusalem" src="https://images.unsplash.com/photo-1521846562476-9c2446539e47?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MjA0OTF8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
-<li>Old Jaffa, Tel Aviv: 32.0543, 34.7514<img alt="Old Jaffa, Tel Aviv" src="https://images.unsplash.com/photo-1595254310314-1cbfec789779?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MjA0OTJ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
+<ul style="display:flex; flex-wrap:wrap; gap:1rem; list-style:none; padding:0; margin:0;">
+<li style="flex:1; min-width:200px; display:flex; flex-direction:column; align-items:center;">Masada, Masada National Park: 31.3147, 35.3542<img alt="Masada, Masada National Park" src="https://images.unsplash.com/photo-1601766931359-964469c27915?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MjEwNzN8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
+<li style="flex:1; min-width:200px; display:flex; flex-direction:column; align-items:center;">The Western Wall, Jerusalem: 31.7767, 35.2345<img alt="The Western Wall, Jerusalem" src="https://images.unsplash.com/photo-1521547660339-77a813258c3b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MjEwNzR8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
+<li style="flex:1; min-width:200px; display:flex; flex-direction:column; align-items:center;">Akko (Acre) Old City, Acre: 32.9214, 35.0694<img alt="Akko (Acre) Old City, Acre" src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MjEwNzR8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
 </ul>
 </body>
 </html>
