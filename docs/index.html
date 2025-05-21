@@ -10,9 +10,8 @@
 <style>
         img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
-            margin: 10px 0;
+            height: auto;
+            margin: 20px 0;
         }
     </style>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/><style>
@@ -26,25 +25,24 @@
 
 
 
-<p><b>Masada, Masada National Park</b>: Located near the Dead Sea, Masada is an ancient fortification on a rocky plateau, famous for its historical significance and breathtaking sunrises. Fun fact: Masada was the site of a heroic last stand by Jewish rebels against the Roman Empire.</p>
-<p><b>The Western Wall, Jerusalem</b>: A sacred site in Judaism, the Western Wall is a remaining wall of the Second Temple, attracting millions of visitors each year. Fun fact: The wall is also known as the Wailing Wall due to the traditional Jewish practice of lamenting the destruction of the Temple.</p>
-<p><b>Akko (Acre) Old City, Acre</b>: A historic city with a rich cultural heritage, Akko's Old City is a UNESCO World Heritage Site, featuring ancient architecture, including Crusader-era structures. Fun fact: Akko has been an important port city for thousands of years, with a history dating back to the Phoenicians.</p>
+<p><strong>Masada, Masada National Park</strong> - Masada is an ancient fortification situated on a plateau atop a rock monolith, and it's a UNESCO World Heritage Site. Fun fact: Masada was the site of a famous siege by the Roman Empire in 73 CE.</p>
+<p><strong>The Western Wall, Jerusalem</strong> - The Western Wall is a sacred site in Judaism, and it's the last remaining wall of the Second Temple. Fun fact: The Western Wall is also known as the Wailing Wall due to the prayers and lamentations of Jewish people.</p>
+<p><strong>Tel Aviv Beach Promenade, Tel Aviv</strong> - The Tel Aviv Beach Promenade is a scenic walkway along the Mediterranean coast, perfect for a leisurely stroll or a bike ride. Fun fact: The promenade is lined with cafes, restaurants, and shops, making it a popular spot for both locals and tourists.</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
         var map = L.map('map').setView([31.5, 34.75], 8);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap'
+            attribution: '© OpenStreetMap'
         }).addTo(map);
-
-        L.marker([31.3147, 35.3542]).addTo(map).bindPopup('Masada');
-        L.marker([31.7767, 35.2345]).addTo(map).bindPopup('The Western Wall');
-        L.marker([32.9214, 35.0694]).addTo(map).bindPopup('Akko (Acre) Old City');
+        L.marker([31.3147, 35.2353]).addTo(map).bindPopup('Masada');
+        L.marker([31.778, 35.2345]).addTo(map).bindPopup('The Western Wall');
+        L.marker([32.0833, 34.7667]).addTo(map).bindPopup('Tel Aviv Beach Promenade');
     </script>
-<h2>Attraction Coordinates</h2>
+<h2>Coordinates</h2>
 <ul style="display:flex; flex-wrap:wrap; gap:1rem; list-style:none; padding:0; margin:0;">
-<li style="flex:1; min-width:200px; display:flex; flex-direction:column; align-items:center;">Masada, Masada National Park: 31.3147, 35.3542<img alt="Masada, Masada National Park" src="https://images.unsplash.com/photo-1601766931359-964469c27915?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MjEwNzN8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
-<li style="flex:1; min-width:200px; display:flex; flex-direction:column; align-items:center;">The Western Wall, Jerusalem: 31.7767, 35.2345<img alt="The Western Wall, Jerusalem" src="https://images.unsplash.com/photo-1521547660339-77a813258c3b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MjEwNzR8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
-<li style="flex:1; min-width:200px; display:flex; flex-direction:column; align-items:center;">Akko (Acre) Old City, Acre: 32.9214, 35.0694<img alt="Akko (Acre) Old City, Acre" src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MjEwNzR8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
+<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Masada, Masada National Park: 31.3147, 35.2353<img alt="Masada, Masada National Park" src="https://images.unsplash.com/photo-1545598371-c0003b8f3a01?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MjE1ODh8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
+<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">The Western Wall, Jerusalem: 31.778, 35.2345<img alt="The Western Wall, Jerusalem" src="https://images.unsplash.com/photo-1712864295231-5ea990e6be63?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MjE1ODl8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
+<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Tel Aviv Beach Promenade, Tel Aviv: 32.0833, 34.7667<img alt="Tel Aviv Beach Promenade, Tel Aviv" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MjE1ODl8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
 </ul>
 </body>
 </html>
