@@ -21,29 +21,28 @@
 
 
 
-<h2>Top Attractions in Argentina</h2>
-<h3>Iguazú Falls, Misiones</h3>
-<p>Iguazú Falls is a breathtaking spectacle of 275 individual waterfalls spanning almost 2 miles. A fun fact about Iguazú Falls is that it's surrounded by lush tropical rainforest, making it a haven for exotic wildlife and plants.</p>
-<h3>Recoleta Cemetery, Buenos Aires</h3>
-<p>Recoleta Cemetery is a grand necropolis that's often referred to as the 'city of the dead'. A fun fact about Recoleta Cemetery is that it's the final resting place of Eva Perón, the former First Lady of Argentina.</p>
-<h3>Perito Moreno Glacier, Santa Cruz</h3>
-<p>Perito Moreno Glacier is a majestic glacier located in Los Glaciares National Park. A fun fact about Perito Moreno Glacier is that it's one of the few glaciers in the world that's still growing, due to its unique location and climate.</p>
+<h2>Top Attractions</h2>
+<h3>Teatro Colón, Buenos Aires</h3>
+<p>Teatro Colón is one of the world's most famous opera houses, known for its stunning architecture and exceptional acoustics. Did you know it's considered one of the top five opera houses in the world?</p>
+<h3>Iguazú Falls, Puerto Iguazú</h3>
+<p>Iguazú Falls is a breathtaking spectacle of 275 individual waterfalls spanning nearly 2 miles. A fun fact is that the falls are so massive they create their own microclimate, often shrouded in mist.</p>
+<h3>Perito Moreno Glacier, El Chaltén</h3>
+<p>Perito Moreno Glacier is a majestic glacier located in Los Glaciares National Park. An interesting fact is that it's one of the few glaciers still in advance, meaning it's still growing.</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
-        var map = L.map('map').setView([-34.6084, -58.3732], 4);
+        var map = L.map('map').setView([-34.6037, -58.3816], 4);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: ' OpenStreetMap'
         }).addTo(map);
-
+        L.marker([-34.6011, -58.3727]).addTo(map).bindPopup('Teatro Colón');
         L.marker([-25.6953, -54.4367]).addTo(map).bindPopup('Iguazú Falls');
-        L.marker([-34.5881, -58.3923]).addTo(map).bindPopup('Recoleta Cemetery');
-        L.marker([-50.4667, -73.0333]).addTo(map).bindPopup('Perito Moreno Glacier');
+        L.marker([-50.4769, -73.0814]).addTo(map).bindPopup('Perito Moreno Glacier');
     </script>
 <h2>Attraction Coordinates</h2>
 <ul>
-<li>Iguazú Falls: -25.6953, -54.4367</li><img alt="Argentin landscape" src="https://source.unsplash.com/800x600/?Argentin,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Recoleta Cemetery: -34.5881, -58.3923</li><img alt="Argentin city" src="https://source.unsplash.com/800x600/?Argentin,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
-<li>Perito Moreno Glacier: -50.4667, -73.0333</li><img alt="Argentin nature" src="https://source.unsplash.com/800x600/?Argentin,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Teatro Colón: -34.6011, -58.3727</li><img alt="Argentina landscape" src="https://source.unsplash.com/800x600/?Argentina,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Iguazú Falls: -25.6953, -54.4367</li><img alt="Argentina city" src="https://source.unsplash.com/800x600/?Argentina,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Perito Moreno Glacier: -50.4769, -73.0814</li><img alt="Argentina nature" src="https://source.unsplash.com/800x600/?Argentina,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
 </ul>
 </body>
 </html>
