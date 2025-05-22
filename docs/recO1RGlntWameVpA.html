@@ -1,50 +1,60 @@
+```html
 <!DOCTYPE html>
 
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Spain Travel Guide</title>
-<link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<title>Spain</title>
 <style>
         img {
             width: 100%;
             height: auto;
-            max-width: 300px;
-            margin: 10px;
+            margin: 10px 0;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
         }
     </style>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/><style>
-          html, body, * {
-              font-family: 'Roboto', sans-serif !important;
-          }
-          </style></head>
+</head>
 <body>
-<h1>Discover Spain</h1><h2>Top Attractions in Spain</h2>
+<h1>Spain</h1>
 
 
 
-<h2>Top Attractions</h2>
-<p><b>Alhambra, Granada</b>: The Alhambra is a palace and fortress complex that was originally constructed as a small fortress in AD 889. One fun fact about the Alhambra is that it is considered one of the most important Islamic architecture monuments in the world.</p>
-<p><b>Museo del Prado, Madrid</b>: The Museo del Prado is the main Spanish national art museum, located in Madrid. A fun fact about the Museo del Prado is that it houses an extensive collection of works by Goya, including his famous 'The Third of May 1808'.</p>
-<p><b>La Sagrada Familia, Barcelona</b>: La Sagrada Familia is a large unfinished Catholic church designed by Antoni Gaudí. A fun fact about La Sagrada Familia is that it is expected to be completed by 2026, marking the centenary of Gaudí's death.</p>
-<div id="map" style="width:100%; height:400px;"></div>
+<h2>Attractions in Spain</h2>
+<p><b>Royal Palace of Madrid</b>, located in Madrid, is the official residence of the Spanish royal family, although it's used only for ceremonial purposes. It has over 3,000 rooms. It's one of the largest palaces in Europe.</p>
+<p><b>La Sagrada Familia</b>, in Barcelona, is a famous cathedral designed by Antoni Gaudí, known for its intricate and unique architecture. Construction began in 1882 and is still ongoing. It's a UNESCO World Heritage Site.</p>
+<p><b>Alhambra</b>, in Granada, is a medieval Islamic palace that showcases Moorish architecture. It's known for its intricate calligraphy and geometric patterns. The Alhambra is a testament to Spain's rich cultural heritage.</p>
+<div id="map"></div>
 <script>
-        var map = L.map('map').setView([40.4168, -3.7038], 6);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap'
-        }).addTo(map);
-        
-        L.marker([37.1763, -3.5881]).addTo(map).bindPopup('Alhambra');
-        L.marker([40.4136, -3.6924]).addTo(map).bindPopup('Museo del Prado');
-        L.marker([41.4036, 2.1744]).addTo(map).bindPopup('La Sagrada Familia');
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 40.4168, lng: -3.7038 },
+                zoom: 6,
+            });
+            const attractions = [
+                { name: "Royal Palace of Madrid", lat: 40.4183, lng: -3.7143 },
+                { name: "La Sagrada Familia", lat: 41.4036, lng: 2.1744 },
+                { name: "Alhambra", lat: 37.1764, lng: -3.5881 },
+            ];
+            attractions.forEach((attraction) => {
+                new google.maps.Marker({
+                    position: { lat: attraction.lat, lng: attraction.lng },
+                    map: map,
+                    title: attraction.name,
+                });
+            });
+        }
     </script>
-<h2>Attraction Coordinates</h2>
+<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&amp;callback=initMap&amp;libraries=&amp;v=weekly"></script>
+<h2>Coordinates of Attractions</h2>
 <ul>
-<li>Alhambra, Granada: 37.1763, -3.5881<img alt="Alhambra, Granada" src="https://images.unsplash.com/photo-1725881283249-c77cc5183168?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTgzNDR8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
-<li>Museo del Prado, Madrid: 40.4136, -3.6924<img alt="Museo del Prado, Madrid" src="https://images.unsplash.com/photo-1706756141867-6a41b7c97376?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTgzNDV8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
-<li>La Sagrada Familia, Barcelona: 41.4036, 2.1744<img alt="La Sagrada Familia, Barcelona" src="https://images.unsplash.com/photo-1720018958562-4ba7e36531b2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTgzNDd8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:30%;height:auto;  margin:0.5rem 0; display:block;object-fit:contain;"/></li>
+<li>Royal Palace of Madrid: 40.4183, -3.7143</li><img alt="Spain landscape" src="https://source.unsplash.com/800x600/?Spain,landscape" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>La Sagrada Familia: 41.4036, 2.1744</li><img alt="Spain city" src="https://source.unsplash.com/800x600/?Spain,city" style="max-width:100%; margin:0.5rem 0; display:block;"/>
+<li>Alhambra: 37.1764, -3.5881</li><img alt="Spain nature" src="https://source.unsplash.com/800x600/?Spain,nature" style="max-width:100%; margin:0.5rem 0; display:block;"/>
 </ul>
 </body>
 </html>
+```
