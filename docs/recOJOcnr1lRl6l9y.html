@@ -10,8 +10,7 @@
 <style>
         img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: auto;
             margin: 10px 0;
         }
     </style>
@@ -26,12 +25,9 @@
 
 
 <h2>Top Attractions in Argentina</h2>
-<h3>Teatro Colón, Buenos Aires</h3>
-<p>Teatro Colón is one of the world's most famous opera houses, known for its stunning architecture and exceptional acoustics. Did you know it's considered one of the top five opera houses in the world?</p>
-<h3>Iguazú Falls, Misiones</h3>
-<p>Iguazú Falls is a breathtaking spectacle of 275 individual waterfalls spanning almost 2 miles. The falls are surrounded by lush tropical rainforest, making it a breathtaking natural wonder.</p>
-<h3>Perito Moreno Glacier, Santa Cruz</h3>
-<p>Perito Moreno Glacier is a stunning glacier located in Los Glaciares National Park, Patagonia. It's one of the few glaciers in the world that's still growing, and visitors can watch it calve from a short distance.</p>
+<p><strong>Teatro Colón, Buenos Aires:</strong> This world-renowned opera house is considered one of the greatest opera houses in the world and has been host to some of the most famous performers in history. Fun fact: It has a unique "shoebox" design, characteristic of 19th-century opera houses, which provides excellent acoustics.</p>
+<p><strong>Iguazú Falls, Puerto Iguazú:</strong> Spanning over 2.7 kilometers, Iguazú Falls is a breathtaking spectacle of nature, with water cascading down in multiple cataracts. Fun fact: The falls are surrounded by lush tropical rainforest, home to a wide variety of wildlife.</p>
+<p><strong>Plaza de Mayo, Buenos Aires:</strong> This historic square has been the site of many significant events in Argentine history, including protests, celebrations, and official ceremonies. Fun fact: The Plaza is surrounded by important government buildings, including the Casa Rosada, the presidential palace.</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
         var map = L.map('map').setView([-34.6037, -58.3816], 4);
@@ -41,13 +37,13 @@
 
         L.marker([-34.6011, -58.3727]).addTo(map).bindPopup('Teatro Colón');
         L.marker([-25.6953, -54.4367]).addTo(map).bindPopup('Iguazú Falls');
-        L.marker([-50.4883, -73.0314]).addTo(map).bindPopup('Perito Moreno Glacier');
+        L.marker([-34.6084, -58.3732]).addTo(map).bindPopup('Plaza de Mayo');
     </script>
 <h2>Attraction Coordinates</h2>
 <ul style="display:flex; flex-wrap:wrap; gap:1rem; list-style:none; padding:0; margin:0;">
-<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Teatro Colón, Buenos Aires: -34.6011, -58.3727<img alt="Teatro Colón, Buenos Aires" src="https://images.unsplash.com/photo-1745409927380-1ca6cb4a8c3c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5OTI3NzJ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
-<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Iguazú Falls, Misiones: -25.6953, -54.4367<img alt="Iguazú Falls, Misiones" src="https://images.unsplash.com/photo-1631115490735-e4bec63628e5?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5OTI3NzR8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
-<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Perito Moreno Glacier, Santa Cruz: -50.4883, -73.0314<img alt="Perito Moreno Glacier, Santa Cruz" src="https://images.unsplash.com/photo-1549401253-c341418e961e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5OTI3NzV8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
+<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Teatro Colón, Buenos Aires: -34.6011, -58.3727<img alt="Teatro Colón, Buenos Aires" src="https://images.unsplash.com/photo-1745412203973-081384863b86?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5OTMxODF8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
+<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Iguazú Falls, Puerto Iguazú: -25.6953, -54.4367<img alt="Iguazú Falls, Puerto Iguazú" src="https://images.unsplash.com/photo-1648132177328-5a2d15deff16?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5OTMxODN8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
+<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Plaza de Mayo, Buenos Aires: -34.6084, -58.3732<img alt="Plaza de Mayo, Buenos Aires" src="https://images.unsplash.com/photo-1607028227034-f0378aa1bd2c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5OTMxODR8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
 </ul>
 </body>
 </html>
