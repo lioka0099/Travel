@@ -3,74 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <title>סקירת דף הטיול</title>
-  <!-- Firebase SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; }
+    textarea { width: 100%; }
+    button { padding: 0.5rem 1rem; }
+  </style>
 </head>
-<body style="font-family:Arial,sans-serif; padding:2rem;">
-
+<body>
   <h1>סקור/י את דף הטיול שלך</h1>
-
   <p>ניתן לצפות בדף לפני קבלת ההחלטה:</p>
   <p><a id="page-link" href="#" target="_blank">צפה בדף הטיול</a></p>
-
   <div id="review-container"></div>
 
   <script>
-    // 1) אתחול Firebase — החליפי בפרטי הפרויקט שלך
-    const firebaseConfig = {
-      apiKey: "AIza…",                           // מקבלי מה-Firebase Console
-      authDomain: "travel-project-73876.firebaseapp.com",
-      projectId: "travel-project-73876"
-    };
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
+    // 0) פרטי ה-Airtable — **אל תחשפו את המפתח לפרודקשן!**
+    const AIRTABLE_API_KEY = 'YOUR_AIRTABLE_API_KEY';
+    const AIRTABLE_BASE   = 'appqeJB6wDrUSbRiN';
+    const AIRTABLE_TABLE  = 'tblY2wKVEMrfJpUQX';
 
-    // 2) קריאת פרמטרים מה־URL
+    // 1) קריאת פרמטרי ה־URL
     const params   = new URLSearchParams(window.location.search);
     const recordId = params.get('record');    // מזהה הרשומה ב-Airtable
     const decision = params.get('decision');  // 'accept' או 'reject'
-    const pageUrl  = params.get('page_url');  // URL המקורי של דף הטיול
+    const pageUrl  = params.get('page_url');
 
-    // 3) עדכון הקישור לצפייה בדף
+    // 2) עדכון הקישור לצפייה
     document.getElementById('page-link').href = decodeURIComponent(pageUrl);
 
-    // 4) פונקציה לשמירת הבחירה ב־Firestore
-    function saveResponse(status, comment = "") {
-      db.collection('responses').add({
-        recordId: recordId,
-        status: status,
-        comment: comment,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    // 3) פונקציה לעדכון ה-Airtable
+    function updateAirtable(status, comment = '') {
+      fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE}/${AIRTABLE_TABLE}/${recordId}`, {
+        method: 'PATCH',
+        headers: {
+          'Authorization': `Bearer ${AIRTABLE_API_KEY}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          fields: {
+            Status:   status === 'accept' ? 'Approved' : 'Rejected',
+            Comments: comment
+          }
+        })
+      })
+      .then(resp => {
+        if (!resp.ok) throw new Error(resp.statusText);
+        return resp.json();
       })
       .then(() => {
         document.getElementById('review-container').innerHTML =
-          '<h2>תודה! הבחירה שלך נשמרה בהצלחה.</h2>';
+          '<h2>תודה! הבחירה נשמרה בהצלחה ב-Airtable.</h2>';
       })
       .catch(err => {
         document.getElementById('review-container').innerHTML =
-          '<p style="color:red">שגיאה בשמירה: ' + err + '</p>';
+          `<p style="color:red">שגיאה בעדכון Airtable: ${err.message}</p>`;
       });
     }
 
-    // 5) טיפול ב־decision
+    // 4) הצגת UI לפי decision
     if (decision === 'accept') {
-      saveResponse('accepted');
+      updateAirtable('accept');
     }
     else if (decision === 'reject') {
       document.getElementById('review-container').innerHTML = `
         <h3>אנא ציין/י מדוע דחית את הדף:</h3>
-        <textarea id="comment" rows="4" cols="50"></textarea><br/><br/>
-        <button id="submit-comment">שלח תגובה</button>
+        <textarea id="comment" rows="4"></textarea><br/><br/>
+        <button id="submit">שלח תגובה</button>
       `;
-      document.getElementById('submit-comment')
-        .addEventListener('click', () => {
-          const comment = document.getElementById('comment').value;
-          saveResponse('rejected', comment);
-        });
+      document.getElementById('submit').addEventListener('click', () => {
+        const comment = document.getElementById('comment').value;
+        updateAirtable('reject', comment);
+      });
     }
   </script>
-
 </body>
 </html>
-
