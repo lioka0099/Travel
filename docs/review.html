@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>סקירת דף הטיול</title>
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+</head>
+<body style="font-family:Arial,sans-serif; padding:2rem;">
+
+  <h1>סקור/י את דף הטיול שלך</h1>
+
+  <p>ניתן לצפות בדף לפני קבלת ההחלטה:</p>
+  <p><a id="page-link" href="#" target="_blank">צפה בדף הטיול</a></p>
+
+  <div id="review-container"></div>
+
+  <script>
+    // 1) אתחול Firebase — החליפי בפרטי הפרויקט שלך
+    const firebaseConfig = {
+      apiKey: "AIza…",                           // מקבלי מה-Firebase Console
+      authDomain: "travel-project-73876.firebaseapp.com",
+      projectId: "travel-project-73876"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    // 2) קריאת פרמטרים מה־URL
+    const params   = new URLSearchParams(window.location.search);
+    const recordId = params.get('record');    // מזהה הרשומה ב-Airtable
+    const decision = params.get('decision');  // 'accept' או 'reject'
+    const pageUrl  = params.get('page_url');  // URL המקורי של דף הטיול
+
+    // 3) עדכון הקישור לצפייה בדף
+    document.getElementById('page-link').href = decodeURIComponent(pageUrl);
+
+    // 4) פונקציה לשמירת הבחירה ב־Firestore
+    function saveResponse(status, comment = "") {
+      db.collection('responses').add({
+        recordId: recordId,
+        status: status,
+        comment: comment,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      })
+      .then(() => {
+        document.getElementById('review-container').innerHTML =
+          '<h2>תודה! הבחירה שלך נשמרה בהצלחה.</h2>';
+      })
+      .catch(err => {
+        document.getElementById('review-container').innerHTML =
+          '<p style="color:red">שגיאה בשמירה: ' + err + '</p>';
+      });
+    }
+
+    // 5) טיפול ב־decision
+    if (decision === 'accept') {
+      saveResponse('accepted');
+    }
+    else if (decision === 'reject') {
+      document.getElementById('review-container').innerHTML = `
+        <h3>אנא ציין/י מדוע דחית את הדף:</h3>
+        <textarea id="comment" rows="4" cols="50"></textarea><br/><br/>
+        <button id="submit-comment">שלח תגובה</button>
+      `;
+      document.getElementById('submit-comment')
+        .addEventListener('click', () => {
+          const comment = document.getElementById('comment').value;
+          saveResponse('rejected', comment);
+        });
+    }
+  </script>
+
+</body>
+</html>
 
