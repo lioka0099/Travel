@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Argentina</title>
+<title>Argentina Travel Guide</title>
 <link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <style>
@@ -26,28 +26,25 @@
 
 
 
-<h3>Teatro Colón, Buenos Aires</h3>
-<p>Teatro Colón is one of the world's most renowned opera houses, known for its exceptional acoustics and ornate architecture. Fun fact: It took over 28 years to complete its construction, finally opening in 1908.</p>
-<h3>Iguazú Falls, Misiones</h3>
-<p>Iguazú Falls is a breathtaking spectacle of nature, consisting of over 275 individual waterfalls. Fun fact: The falls are surrounded by lush tropical rainforest, making it a UNESCO World Heritage site.</p>
-<h3>Perito Moreno Glacier, Santa Cruz</h3>
-<p>Perito Moreno Glacier is a majestic glacier located in Los Glaciares National Park. Fun fact: It's one of the few glaciers in the world that is still growing, and it's a popular spot for glacier trekking.</p>
+<p><b>Teatro Colón, Buenos Aires</b>: This stunning opera house is considered one of the world's best, known for its exceptional acoustics and ornate decor. Fun fact: It took 28 years to complete its construction.</p>
+<p><b>Iguazú Falls, Misiones Province</b>: A breathtaking spectacle of 275 individual waterfalls, Iguazú Falls is a natural wonder that attracts visitors from around the globe. Fun fact: The falls are surrounded by lush subtropical rainforest.</p>
+<p><b>Perito Moreno Glacier, Santa Cruz Province</b>: A majestic glacier in Los Glaciares National Park, Perito Moreno is known for its dramatic calving events. Fun fact: It's one of the few glaciers in the world that is still growing.</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
-        var map = L.map('map').setView([-34.6037, -58.3816], 4);
+        var map = L.map('map').setView([-34.6084, -58.3732], 4);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: ' OpenStreetMap'
         }).addTo(map);
-        
+
         L.marker([-34.6011, -58.3727]).addTo(map).bindPopup('Teatro Colón');
         L.marker([-25.6953, -54.4367]).addTo(map).bindPopup('Iguazú Falls');
         L.marker([-50.4667, -73.0333]).addTo(map).bindPopup('Perito Moreno Glacier');
     </script>
 <h2>Attraction Coordinates</h2>
 <ul style="display:flex; flex-wrap:wrap; gap:1rem; list-style:none; padding:0; margin:0;">
-<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Teatro Colón, Buenos Aires: -34.6011, -58.3727<img alt="Teatro Colón, Buenos Aires" src="https://images.unsplash.com/photo-1639658642030-35de608d6f21?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5ODc4MjN8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
-<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Iguazú Falls, Misiones: -25.6953, -54.4367<img alt="Iguazú Falls, Misiones" src="https://images.unsplash.com/photo-1583130142317-1f46d3e66f14?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5ODc4MjN8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
-<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Perito Moreno Glacier, Santa Cruz: -50.4667, -73.0333<img alt="Perito Moreno Glacier, Santa Cruz" src="https://images.unsplash.com/photo-1615755224692-9dbea5129226?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5ODc4MjR8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
+<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Teatro Colón, Buenos Aires: -34.6011, -58.3727<img alt="Teatro Colón, Buenos Aires" src="https://images.unsplash.com/photo-1521513595053-011ebdffe89e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5OTI0NzR8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
+<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Iguazú Falls, Misiones Province: -25.6953, -54.4367<img alt="Iguazú Falls, Misiones Province" src="https://images.unsplash.com/photo-1712734206259-4712185e7a5e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5OTI0NzV8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
+<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Perito Moreno Glacier, Santa Cruz Province: -50.4667, -73.0333<img alt="Perito Moreno Glacier, Santa Cruz Province" src="https://images.unsplash.com/photo-1638916777701-48a3d59d121d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5OTI0NzZ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
 </ul>
 </body>
 </html>
