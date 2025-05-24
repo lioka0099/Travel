@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Italy Travel Guide</title>
+<title>Belize Travel Guide</title>
 <link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <style>
@@ -21,29 +21,33 @@
           }
           </style></head>
 <body>
-<h1>Travel in Italy</h1><h2>Top Attractions in Italy</h2>
+<h1>Travel in Belize</h1><h2>Top Attractions in Belize</h2>
 
 
 
-
-<p><b>Colosseum, Rome</b>: This ancient amphitheater is one of Rome's most iconic landmarks and hosted gladiator battles and public events.</p>
-<p><b>Grand Canal, Venice</b>: The main waterway through Venice is known for its stunning architecture and romantic gondola rides.</p>
-<p><b>Cathedral of Santa Maria del Fiore, Florence</b>: This terracotta-tiled cathedral complex is a masterpiece of Renaissance architecture and features a dome designed by Filippo Brunelleschi.</p>
+<h2>Top Attractions in Belize</h2>
+<h3>The Great Blue Hole, Belize City</h3>
+<p>The Great Blue Hole is a stunning underwater sinkhole that's over 300 meters in diameter. A fun fact about this natural wonder is that it's so big that it can be seen from space!</p>
+<h3>Caracol, San Ignacio</h3>
+<p>Caracol is an ancient Mayan temple that's deep in the jungle. Interestingly, it was once a major city, and its remains still hold many secrets.</p>
+<h3>Lamanai, Orange Walk Town</h3>
+<p>Lamanai is another significant Mayan archaeological site, known for its well-preserved structures. A fun fact is that its name means "submerged crocodile," reflecting its history.</p>
 <div id="map" style="width:100%; height:400px;"></div>
 <script>
-        var map = L.map('map').setView([43.1719, 12.5033], 6);
+        var map = L.map('map').setView([17.25, -88.75], 7);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap'
+            attribution: ' OpenStreetMap'
         }).addTo(map);
-        L.marker([41.8902, 12.4922]).addTo(map).bindPopup('Colosseum');
-        L.marker([45.4378, 12.3356]).addTo(map).bindPopup('Grand Canal');
-        L.marker([43.7731, 11.2564]).addTo(map).bindPopup('Cathedral of Santa Maria del Fiore');
+
+        L.marker([17.76, -87.53]).addTo(map).bindPopup('The Great Blue Hole');
+        L.marker([16.76, -89.12]).addTo(map).bindPopup('Caracol');
+        L.marker([17.75, -88.65]).addTo(map).bindPopup('Lamanai');
     </script>
-<h2>Attraction Coordinates</h2>
+<h2>Attractions Coordinates</h2>
 <ul style="display:flex; flex-wrap:wrap; gap:1rem; list-style:none; padding:0; margin:0;">
-<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Colosseum, Rome: 41.8902, 12.4922<img alt="Colosseum, Rome" src="https://images.unsplash.com/photo-1602065286283-f9bd5cda2470?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgwODg4MzZ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
-<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Grand Canal, Venice: 45.4378, 12.3356<img alt="Grand Canal, Venice" src="https://images.unsplash.com/photo-1546946572-88e045173b8e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgwODg4MzZ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
-<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Cathedral of Santa Maria del Fiore, Florence: 43.7731, 11.2564<img alt="Cathedral of Santa Maria del Fiore, Florence" src="https://images.unsplash.com/photo-1600786288236-c758c696f9d5?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgwODg4Mzd8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
+<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">The Great Blue Hole, Belize City: 17.76, -87.53<img alt="The Great Blue Hole, Belize City" src="https://images.unsplash.com/photo-1610384116578-9824d77a8fc8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgwODg4NTl8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
+<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Caracol, San Ignacio: 16.76, -89.12<img alt="Caracol, San Ignacio" src="https://images.unsplash.com/photo-1570133103105-83510bef623d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgwODg4NjB8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
+<li style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:center;">Lamanai, Orange Walk Town: 17.75, -88.65<img alt="Lamanai, Orange Walk Town" src="https://images.unsplash.com/photo-1459663296021-50769c04b149?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTM5MDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgwODg4NjF8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="width:100%; height:auto; object-fit:cover; margin-bottom:0.5rem;margin-bottom:0.5rem;"/></li>
 </ul>
 </body>
 </html>
